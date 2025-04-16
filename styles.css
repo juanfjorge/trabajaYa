@@ -93,3 +93,13 @@
 .menu .cuenta {
     margin-left: auto; /* Empuja este ítem a la derecha */
 }
+
+/* Estilos Hoja registo*/
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    
+    
+}
