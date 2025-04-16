@@ -84,14 +84,74 @@
         </ul>
     </nav>
 
+    <ul class="elegirUser">
 
-        <ul class="pagination">
+        <div class="btn-group" role="group" aria-label="Selector de rol">
+            <input type="radio" class="btn-check" name="rol" id="btn-trabajador" autocomplete="off" checked>
+            <label class="btn btn-selector" for="btn-trabajador">Trabajador</label>
           
-          <li class="page-item"><a class="page-link" href="#">Trabajador</a></li>
-          <li class="page-item"><a class="page-link" href="#">Usuario</a></li>
+            <input type="radio" class="btn-check" name="rol" id="btn-usuario" autocomplete="off">
+            <label class="btn btn-selector" for="btn-usuario">Usuario</label>
+          </div>
           
-        </ul>
-      
+    </ul>
+    <div id="formularioRegistro">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" required>
+                <label for="inputAddress2" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Ingrese su nombre aqui" required>
+              </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese una contraseña segura" required>
+
+              <label for="inputAddress" class="form-label">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="inputAddress" placeholder="Confirmar contraseña" required>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Seleccione su servicio</label>
+              <select id="inputState" class="form-select">
+                <option selected>Elegir</option>
+                <option>Hogar</option>
+                <option>Educacion</option>
+                <option>Jardin</option>
+                <option>Mascotas</option>
+                <option>Bienestar y estetica</option>
+                <option>Cuidado personal y familiar</option>
+                <option>Profesor particular</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+                <label for="formFileSm" class="form-label">Cargar Foto de perfil </label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" required>
+                
+            </div>
+            <div class="col-md-6">
+                <label for="formFileSm" class="form-label">Cargar Certificado de buena conducta </label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" required>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck" required>
+                  <a href="index.html">Terminos y condiciones</a>
+                </label>
+              </div>
+            </div>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn-dark" type="button">Registrarse a la pagina</button>
+              </div>
+            </div>
+          </form>
+    </div>
     
 </body>
 </html>
