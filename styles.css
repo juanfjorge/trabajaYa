@@ -117,4 +117,82 @@
 }
 .elegirUser #row + .g-3 {
   background-color: #444;
+}
+
+.slogan {
+  background-image: url(./assets/img/manosImagen.jpeg);
+  background-size: cover; /* Hace que la imagen cubra todo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto; /* 100% del alto visible de la pantalla */
+  color: white;
+}
+
+.ubiYsvc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.trabajadores {
+  display: grid;
+  grid-template-columns: repeat(3, 40rem);
+  grid-column-gap: 10px;
+  grid-row-gap: 40px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.footer {
+  margin-top: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer h6 {
+  margin-bottom: 1rem;
+}
+
+.footer .social-icons a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #212529;
+}
+
+.footer .social-icons a:hover {
+  color: #0d6efd;
+}
+
+.card-profesional {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.card-profesional .imagen img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.similares {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 5px;
+  gap: 10px;
 }/*# sourceMappingURL=styles.css.map */
