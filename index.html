@@ -10,128 +10,218 @@
     <link rel="icon" href="assets/img/favicon4.jpg" type="image/x-icon">
 </head>
 <body>
-    <header>
+  <header>
+    <div class="header-left">
+      <div class="logo-container">
         <a href="index.html">
-            <img src="assets/img/logo.jpg" alt="logo ty" class="logo-home">
+          <img src="assets/img/logo.jpg" alt="logo ty" class="logo-home">
         </a>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li class="dropdown"><a href="#">Servicios</a>
-                <ul class="submenu">
-                    <li class="dropdown-sub">
-                        <a href="#">Hogar</a>
-                        <ul class="submenu">
-                            <li><a href="#">Plomeria</a></li>
-                            <li><a href="#">Electricista</a></li>
-                            <li><a href="#">Gasista</a></li>
-                            <li><a href="#">Plomeria</a></li>
-                            <li><a href="#">Pintor</a></li>
-                            <li><a href="#">Limpieza doméstica</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-sub">
-                        <a href="#">Jardín</a>
-                        <ul class="submenu">
-                            <li><a href="#">Jardinería</a></li>
-                            <li><a href="#">Limpieza de pileta</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-sub">
-                        <a href="#">Mascotas</a>
-                        <ul class="submenu">
-                            <li><a href="#">Peluqueria canina</a></li>
-                            <li><a href="#">Paseador de perros</a></li>
-                            <li><a href="#">Entrenador de perros</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-sub">
-                        <a href="#">Bienestar y estética</a>
-                        <ul class="submenu">
-                            <li><a href="#">Peluqueria/Barberia</a></li>
-                            <li><a href="#">Manicura/Pedicura</a></li>
-                            <li><a href="#">Maquilladora/Peinadora</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-sub">
-                        <a href="#">Cuidado personal y familia</a>
-                        <ul class="submenu">
-                            <li><a href="#">Cuidado de niños</a></li>
-                            <li><a href="#">Cuidado de adultos mayores</a></li>
-                            <li><a href="#">Cocinero particular</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-sub">
-                        <a href="#">Profesores particulares</a>
-                        <ul class="submenu">
-                            <li><a href="#">Primaria</a></li>
-                            <li><a href="#">Secundaria</a></li>
-                            <li><a href="#">Universidad</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                </li>
-                <li class="dropdown cuenta">
-                    <a href="#">Mi cuenta</a>
-                    <ul class="submenu">
-                        <li><a href="#">Iniciar sesión</a></li>
-                        <li><a href="registro.html">Registrarse</a></li>
-                    </ul>
-                </li>
-                
-            </ul>
-        </nav>
-
-        <div class="actions">
-            <form action="#" method="get">
-                <input type="text" placeholder="Buscar servicios..." name="search">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
-    </header>
-
+      </div>
+      <ul class="menu-left">
+        <li><a href="#">Inicio</a></li>
+        <li class="dropdown"><a href="#">Servicios</a>
+          <ul class="submenu">
+            <li class="dropdown-sub">
+              <a href="#">Hogar</a>
+              <ul class="submenu">
+                <li><a href="#">Plomeria</a></li>
+                <li><a href="#">Electricista</a></li>
+                <li><a href="#">Gasista</a></li>
+                <li><a href="#">Albañil</a></li>
+                <li><a href="#">Pintor</a></li>
+                <li><a href="#">Limpieza doméstica</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-sub">
+              <a href="#">Jardín</a>
+              <ul class="submenu">
+                <li><a href="#">Jardinería</a></li>
+                <li><a href="#">Limpieza de pileta</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-sub">
+              <a href="#">Mascotas</a>
+              <ul class="submenu">
+                <li><a href="#">Peluqueria canina</a></li>
+                <li><a href="#">Paseador de perros</a></li>
+                <li><a href="#">Entrenador de perros</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-sub">
+              <a href="#">Bienestar y estética</a>
+              <ul class="submenu">
+                <li><a href="#">Peluqueria/Barberia</a></li>
+                <li><a href="#">Manicura/Pedicura</a></li>
+                <li><a href="#">Maquilladora/Peinadora</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-sub">
+              <a href="#">Cuidado personal y familia</a>
+              <ul class="submenu">
+                <li><a href="#">Cuidado de niños</a></li>
+                <li><a href="#">Cuidado de adultos mayores</a></li>
+                <li><a href="#">Cocinero particular</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-sub">
+              <a href="#">Profesores particulares</a>
+              <ul class="submenu">
+                <li><a href="#">Primaria</a></li>
+                <li><a href="#">Secundaria</a></li>
+                <li><a href="#">Universidad</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Centro de búsqueda -->
+    <div class="header-center">
+      <form action="#" method="get" class="search-item">
+        <input type="text" placeholder="Buscar servicios..." name="search" class="search-bar">
+        <button type="submit" class="search-btn">Buscar</button>
+      </form>
+    </div>
+  
+    <!-- Menú derecho -->
+    <div class="header-right">
+      <ul class="menu">
+        <li class="dropdown cuenta">
+          <a href="#">Mi cuenta</a>
+          <ul class="submenu">
+            <li><a href="#">Iniciar sesión</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  
         <section class="slogan">
-            <h1>Bienvenidos a TrabajaYa</h1>
+            <h1>¡Bienvenidos a TrabajaYa!</h1>
             <img src="assets/img/logoNombre.jpg" alt="logoName" class="logo-name">
             <p>Conectamos personas con trabajadores de confianza</p>
         </section>
     
-    <section class="servicios">
-        <h2>Servicios que ofrecemos</h2>
-        <ul>
-            <div class="servicio">Plomeria</div>
-            <div class="servicio">Gasista</div>
-            <div class="servicio">Jardineria</div>
-            <div class="servicio">Limpieza de piletas</div>
+        <section class="filtros">
+          <h2>Encontrá el servicio que necesitas</h2>
+          <div class="filtros-container">
+            <select name="" id="filtro-zona">
+              <option value="">Zona</option>
+              <option value="capital">Capital</option>
+              <option value="godoy-cruz">Godoy Cruz</option>
+              <option value="lujan">Lujan de Cuyo</option>
+              <option value="guaymallen">Guaymallén</option>
+              <option value="maipu">Maipú</option>
+              <option value="las-heras">Las Heras</option>
+            </select>
 
-            <div class="servicio">Lavado de autos</div>
-            <div class="servicio">Pintor</div>
-            <div class="servicio">Peluqueria y barberia</div>
-            <div class="servicio">Peluqueria canina</div>
+            <select name="" id="filtro-servicio">
+              <option value="">Categoría</option>
+              <option value="hogar">Hogar</option>
+              <option value="jardin">Jardín</option>
+              <option value="mascotas">Mascotas</option>
+              <option value="bienestar-estética">Bienestar y estética</option>
+              <option value="cuidado-personal">Cuidado Personal y familia</option>
+              <option value="profesores-particulares">Profesores Particulares</option>
+            </select>
+          </div>
+        </section>
 
-            <div class="servicio">Profesores particulares</div>
-            <div class="servicio">Cuidado de niños</div>
-            <div class="servicio">Electricista</div>
-            <div class="servicio">Manicura / Pedicura</div>
+    <section class="tarjetas">
+      <div class="tarjeta">
+        <img src="/assets/img/plomero.jpg" alt="">
+        <h3>Juan Pérez</h3>
+        <p>Servicio: Plomería. <br>Zona:Capital.</p>
+      </div>
 
-            <div class="servicio">Maquilladora</div>
-            <div class="servicio">Instalador de aires acondicionados</div>
-            <div class="servicio">Paseador de perros</div>
-            <div class="servicio">Limpieza doméstica</div>
+      <div class="tarjeta">
+        <img src="/assets/img/electricista.webp" alt="">
+        <h3>Valentino Contrera</h3>
+        <p>Servicio: Electricista. <br>Zona:Capital.</p>
+      </div>
 
-            
+      <div class="tarjeta">
+        <img src="/assets/img/gasisita.jpg" alt="">
+        <h3>Tobias Funestein</h3>
+        <p>Servicio: Gasista. <br>Zona:Capital.</p>
+      </div>
 
+      <div class="tarjeta">
+        <img src="/assets/img/albañil.jpg" alt="">
+        <h3>Francisco Sigue</h3>
+        <p>Servicio: Albañil.<br> Zona:Capital.</p>
+      </div>
 
+      <div class="tarjeta">
+        <img src="/assets/img/limpieza.webp" alt="">
+        <h3>Laura Gomez</h3>
+        <p>Servicio: Limpieza doméstica.<br> Zona:Capital.</p>
+      </div>
 
-            
-        </ul>
+      <div class="tarjeta">
+        <img src="/assets/img/plomero2.jpg" alt="">
+        <h3>Lautaro Tapia</h3>
+        <p>Servicio: Plomería. <br>Zona:Capital.</p>
+      </div>
+        
     </section>
     
+    <footer class="footer">
+      <div class="footer-container">
+        
+        <div class="footer-column">
+          <h4>Seguinos</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="/assets/img/facebook (1).png" alt="Facebook" title="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/assets/img/twitter.png" alt="X"title="X"></a>
+            <a href="https://instagram.com" target="_blank"><img src="/assets/img/instagram.png" alt="Instagram"title="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/assets/img/linkedin.png" alt="LinkedIn"title="Linkedin"></a>
+          </div>
+        </div>
+    
+        <div class="footer-column">
+          <h4>¿Buscás un servicio?</h4>
+          <ul>
+            <li><a href="#">Iniciar sesión</a></li>
+            <li><a href="#">Registrarse</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-column">
+          <h4>Explorar oficios</h4>
+          <ul>
+            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Jardín</a></li>
+            <li><a href="#">Mascotas</a></li>
+            <li><a href="#">Bienestar y estética</a></li>
+            <li><a href="#">Cuidado personal y familia</a></li>
+            <li><a href="#">Profesores Particulares</a></li>
+
+          </ul>
+        </div>
+    
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+    
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
+      </div>
+    </footer>    
+
 </body>
 </html>
