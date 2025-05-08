@@ -93,11 +93,19 @@
 .menu .cuenta {
     margin-left: auto; /* Empuja este ítem a la derecha */
 }
+#formularioRegistroTrabajador{
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+#formularioRegistroUsuario{
+  @extend #formularioRegistroTrabajador;
+  display: none;
+}
 .elegirUser{
     display: flex;
     justify-content: center;
-    
-    margin-top: 15px;
+    margin-top: 100px;
     
     .btn-selector {
         background-color: transparent;
@@ -148,6 +156,7 @@
   align-items: flex-start;
   
 }
+
 .footer{
   margin-top: 15px;
 }
@@ -155,6 +164,7 @@
   text-decoration: none;
   color: #212529;
 }
+
 
 .footer a:hover {
   text-decoration: underline;
