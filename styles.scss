@@ -130,6 +130,50 @@
     }
 
 }
+.loginPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  .card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .aRegistro{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    margin-top: -30px;
+    text-decoration: none;
+    color: #dc3545 ;
+  }
+  .ayuda{
+   text-decoration: none;
+    color: #dc3545;
+  }
+  .tituloLogin{
+    margin-right: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .loginPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card{
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }
+  
+  
+}
+
 .slogan{
   background-image: url(./assets/img/manosImagen.jpeg);
   background-size: cover;       /* Hace que la imagen cubra todo */
