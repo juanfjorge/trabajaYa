@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
     <header class="sticky-top">
-        <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-light ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="./assets/img/favicon4.jpg" alt="Logo" width="40" height="auto" class="d-inline-block align-text-center">
-                    TrabajaYa
-                </a>
+                    <img src="./assets/img/logo-removebg-preview.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-center">TrabajaYa</a>
                 
                 <form class="d-flex mt-3 w-50" role="search">
                     <input class="form-control me-2" type="search"
                     placeholder="Escribe aquí la profesión que buscas o nombre del especialista" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
                 </form>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,36 +40,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- Menú con categorías -->
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown ms-3">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorias
                       </a>
+                    
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Hogar</a></li>
-                        <li><a class="dropdown-item" href="#">Jardín</a></li>
+                        <li><a class="dropdown-item" href="#">Jardin</a></li>
                         <li><a class="dropdown-item" href="#">Mascotas</a></li>
                         <li><a class="dropdown-item" href="#">Bienestar y estética</a></li>
+                        <li><a class="dropdown-item" href="#">Cuidado personal y familia</a></li>
                         <li><a class="dropdown-item" href="#">Profesores particulares</a></li>
                       </ul>
-                    </li>
+                    </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 </div>
               </div>
                 <div class="d-flex">
-                    <a href="login.html" class="btn btn-outline-secondary me-2">Entrar</a>
+                    <a href="login.html" class="btn btn btn-light me-2">Entrar</a>
                     <a href="registro.html" class="btn btn-dark">Registrarse</a>
                 </div>
-          
-            
           </nav>
-          
     </header>
- 
 
         <section class="slogan">
-            <h1>Bienvenidos a TrabajaYa</h1>
-            
-            <img src="assets/img/logoNombre.jpg" alt="logoName" class="logo-name">
             <p>Conectamos personas con trabajadores de confianza</p>
             <p>Encontra cualquier servicio que necesites</p>
         </section>
