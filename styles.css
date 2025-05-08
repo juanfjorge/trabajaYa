@@ -147,14 +147,17 @@
   justify-content: flex-end;
   margin-top: -30px;
   text-decoration: none;
-  color: #dc3545;
+  color: #343a40;
 }
 .loginPage .ayuda {
   text-decoration: none;
-  color: #dc3545;
+  color: #343a40;
 }
 .loginPage .tituloLogin {
   margin-right: 15px;
+}
+.loginPage .footer {
+  background-color: #333;
 }
 
 @media (max-width: 425px) {
@@ -244,4 +247,3 @@
   margin: 5px;
   gap: 10px;
 }/*# sourceMappingURL=styles.css.map */
-
