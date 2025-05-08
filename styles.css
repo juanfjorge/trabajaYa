@@ -1,108 +1,23 @@
 @charset "UTF-8";
+
 .logo-home {
   height: 30px;
   width: auto;
   margin-left: 5px;
   cursor: pointer;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
-  background-color: #A1A1A1 !important; /* Forzar el color de fondo */
+  background-color: #A1A1A1 !important;
+
 }
 
-.slogan {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.logo-name {
-  width: 200px;
-  max-width: 80%;
-  margin-bottom: 20px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  background-color: #333;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu > li > a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  z-index: 999;
-  min-width: 200px;
-}
-
-.submenu li a {
-  padding: 10px 20px;
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-/* Mostrar submenu al pasar el mouse */
-.dropdown:hover > .submenu {
-  display: block;
-}
-
-.dropdown-sub {
-  position: relative;
-}
-
-/* Sub-submenu a la derecha */
-.dropdown-sub:hover > .submenu {
-  display: block;
-  top: 0;
-  left: 100%;
-}
-
-/* Efectos hover */
-.menu > li:hover > a,
-.submenu li a:hover {
-  background-color: #555;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los ítems */
-  background-color: #333;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu .cuenta {
-  margin-left: auto; /* Empuja este ítem a la derecha */
-}
-
-#formularioRegistroTrabajador, #formularioRegistroUsuario {
+#formularioRegistroTrabajador,
+#formularioRegistroUsuario {
   padding: 5px;
   align-items: center;
   justify-content: center;
@@ -117,6 +32,7 @@ body {
   justify-content: center;
   margin-top: 100px;
 }
+
 .elegirUser .btn-selector {
   background-color: transparent;
   color: #333;
@@ -126,14 +42,10 @@ body {
   border: none;
   transition: 0.3s;
 }
+
 .elegirUser .btn-check:checked + .btn-selector {
   background-color: #e4e4e4;
   color: black;
-  border-radius: 10px;
-  border: none;
-}
-.elegirUser #row + .g-3 {
-  background-color: #444;
 }
 
 .loginPage {
@@ -143,11 +55,13 @@ body {
   align-items: center;
   margin-left: 10px;
 }
+
 .loginPage .card {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
+
 .loginPage .aRegistro {
   display: flex;
   align-content: center;
@@ -156,51 +70,34 @@ body {
   text-decoration: none;
   color: #dc3545;
 }
+
 .loginPage .ayuda {
   text-decoration: none;
   color: #dc3545;
 }
+
 .loginPage .tituloLogin {
   margin-right: 15px;
 }
 
-@media (max-width: 425px) {
-  .loginPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .loginPage .card {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-  }
-}
 .slogan {
-  background-image: url(./assets/img/PHOTO-2025-04-10-13-42-24.jpg);
-  background-size: cover;        /* Cubre todo el ancho y alto */
-  background-position: center;   /* Centra la imagen */
-  background-repeat: no-repeat;
-  width: 99vw;                  /* Asegura que ocupe todo el ancho */
-  height: 80vh;                 /* Aumenta el alto (ajustá según lo que necesites) */
-  text-align: center;
-  position: relative;
-  padding-top: 460px;            
-}
-.slogan p{
-  color: #333333; 
-  font-size: 2rem;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 7px solid #A1A1A1; /* o el color y grosor que prefieras */
 }
 
+.slogan-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .ubiYsvc {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   padding: 15px;
 }
 
@@ -214,8 +111,8 @@ body {
 
 .footer {
   margin-top: 15px;
-  background-color: #A1A1A1 !important; /* Forzar el color de fondo */
-
+  background-color: #A1A1A1 !important;
+  padding: 20px;
 }
 
 .footer a {
@@ -249,8 +146,7 @@ body {
 }
 
 .card-profesional .imagen img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .similares {
@@ -259,5 +155,53 @@ body {
   flex-direction: row;
   margin: 5px;
   gap: 10px;
-}/*# sourceMappingURL=styles.css.map */
+}
 
+/* ------------------- RESPONSIVE DESIGN ------------------- 
+@media (max-width: 768px) {
+  .slogan {
+    padding-top: 200px;
+    height: 50vh;
+  }
+
+  .slogan p {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .loginPage .card {
+    width: 90%;
+  }
+
+  .ubiYsvc {
+    padding: 10px;
+  }
+
+  .trabajadores {
+    gap: 10px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slogan {
+    background-position: center 52%;
+    padding-top: 500px;
+  }
+
+  .slogan p {
+    font-size: 2.5rem;
+  }
+
+  .loginPage .card {
+    width: 40%;
+  }
+}
+*/
