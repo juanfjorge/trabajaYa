@@ -68,16 +68,19 @@ body {
   justify-content: flex-end;
   margin-top: -30px;
   text-decoration: none;
-  color: #dc3545;
+  color: #343a40;
 }
 
 .loginPage .ayuda {
   text-decoration: none;
-  color: #dc3545;
+  color: #343a40;
 }
 
 .loginPage .tituloLogin {
   margin-right: 15px;
+}
+.loginPage .footer {
+  background-color: #333;
 }
 
 .slogan {
@@ -155,6 +158,7 @@ body {
   flex-direction: row;
   margin: 5px;
   gap: 10px;
+<<<<<<< HEAD
 }
 
 /* ------------------- RESPONSIVE DESIGN ------------------- 
@@ -205,3 +209,6 @@ body {
   }
 }
 */
+=======
+}/*# sourceMappingURL=styles.css.map */
+>>>>>>> ramaNuevaFran
