@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrabajaYa</title>
     <link rel="icon" href="assets/img/favicon4.jpg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>  
+<body>
     <header class="sticky-top">
         <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-light ">
             <div class="container-fluid">
@@ -58,15 +58,19 @@
                     <a href="registro.html" class="btn btn-dark">Registrarse</a>
                 </div>
           </nav>
-          
-          <ul class="elegirUser">
-
-            <div class="btn-group" role="group" aria-label="Selector de rol">
+</header>
+    
+    <ul class="elegirUser">
+        
+        <div class="btn-group" role="group" aria-label="Selector de rol">
                 <input type="radio" class="btn-check" name="rol" id="btn-mes" autocomplete="off" checked>
                 <label class="btn-mes btn-selector" for="btn-mes">Por mes</label>
               
                 <input type="radio" class="btn-check" name="rol" id="btn-anio" autocomplete="off">
                 <label class="btn-anio btn-selector" for="btn-anio">Por año</label>
+                
+               
+                
             </div>
         </ul>
 
@@ -74,40 +78,220 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                  <div class="card cardBasico text-center background-color:#a1a1a1">
+                  <div class="card cardBasico text-center">
                     <div class="card-body">
                       <h5 class="card-title"><b>Plan Premium</b></h5>
-                      <h5 class="card-subtitle"><b>$2000/m</b></h5>
+                      <h2 class="card-subtitle pMes"><b>$2000</b></h2>
+                      <h2 class="card-subtitle pAnio" style="display: none;"><b>$24000</b></h2>
                       <ul class="card-text">
                         <li class="card-text">Accesos a estadisticas de visitas y rendimientos</li>
                         <li class="card-text">Hasta dos publicaciones de servicios</li>
                         <li class="card-text">Perfil Profesional visible en TrabajaYa</li>
                       </ul>
-                      <a href="#" class="btn btn-dark">Registrarse</a>
+                      <a href="registro.html" class="btn btn-dark mt-5 mx-auto px-5">Registrarse</a>
                     </div>
                   </div>
                 </div>
+
+            </div>
+            
+            <div class="row">
                 <div class="col-sm-6">
                   <div class="card cardPremium text-white bg-danger">
                     <div class="card-body">
                       <h5 class="card-title"><b>Plan Red</b></h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h2 class="card-subtitle pMesD"><b>$5000</b></h2>
+                      <h2 class="card-subtitle pAnioD" style="display: none;"><b>$60000</b></h2>
+                      <ul class="card-text">
+                            <li class="card-text">Perfil Profesional visible en TrabajaYa</li>
+                            <li class="card-text">Publicaciones de servicios ilimitadas</li>
+                            <li class="card-text">Posibilidad de ver las opiniones de los usuarios</li>
+                            <li class="card-text">Prioridad en las busquedas</li>
+                            <li class="card-text">Sello de Recomendado</li>
+                            <li class="card-text">Accesos a estadisticas de visitas y rendimientos</li>
+                      </ul>
+                      <a href="registro.html" class="btn btn-secondary mx-auto px-5">Registrarse</a>
                     </div>
                   </div>
                 </div>
-                </div>
+            </div>
+            
+            <div class="row">
                 <div class="col-sm-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card cardBasico text-center">
+                        <div class="card-body">
+                          <h5 class="card-title"><b>Plan Basico</b></h5>
+                          <h2 class="card-subtitle pMes"><b>Gratis</b></h2>
+                          <h2 class="card-subtitle pAnio" style="display: none;"><b>Gratis</b></h2>
+                          <ul class="card-text">
+                            <li class="card-text">Accesos a estadisticas de visitas y rendimientos</li>
+                            <li class="card-text">Hasta dos publicaciones de servicios</li>
+                            <li class="card-text">Perfil Profesional visible en TrabajaYa</li>
+                          </ul>
+                          <a href="registro.html" class="btn btn-dark mt-5 btn-lg mt-5 px-5">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const btnanio = document.getElementsByClassName("btn-anio")[0];
+                const btnMes = document.getElementsByClassName("btn-anio")[0];
+                const precioMes= document.getElementsByClassName("pMes")[0];
+                const precioMes1= document.getElementsByClassName("pMesD")[0];
+                const precioAnio= document.getElementsByClassName("pAnio")[0];
+                const precioAnio1= document.getElementsByClassName("pAnioD")[0];
+                btnanio.addEventListener("click", function (e) {
+                    precioMes.style.display = 'none';
+                    precioMes1.style.display = 'none';
+                    precioAnio.style.display = 'block';
+                    precioAnio1.style.display = 'block';
+                });
+
+                 btnMes.addEventListener("click", function(e){
+                     precioAnio.style.display = 'none';
+                     precioAnio1.style.display = 'none';
+                     precioMes.style.display = 'block';
+                     precioMes1.style.display = 'block';
+                 });
+            </script>
+        </div>
+        <div class="preguntas">
+            <h2>Preguntas Frecuentes:</h2>
+           
+            <div class="accordion mt-5" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                      ¿Puedo Ofrecer más de un servicio?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Depende del plan elegido se puede ofrecer más de uno.
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                      ¿Qué datos debo ingresar al registrarme?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Nombre y apellido</li>
+                        <li>Correo electrónico</li>
+                        <li>Contraseña</li>
+                        <li>Tipo de servicio que ofrecés</li>
+                        <li>Teléfono de contacto</li>
+                        <li>Zona de trabajo</li>
+                        <li>Una foto de perfil y una descripción.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                      ¿Cómo me contactan los clientes?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Los clientes pueden ver tu perfil y te contactarán directamente por los mensajes internos de la plataforma.
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                      ¿Cómo gestiono mis publicaciones?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Desde tu cuenta vas a poder agregarlas, editar o pausar tus servicios en cualquier momento.
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                      ¿Puedo dar de baja mi cuenta si ya no quiero ofrecer servicios?
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Sí, podés desactivarte por tiempo o eliminarte de forma definitiva desde la configuración de tu cuenta o contactando a soporte.
                     </div>
                   </div>
                 </div>
               </div>
-        
+              
               
         </div>
-    </header>
+
+        <footer class="footer bg-light text-dark py-4 border-top">
+            <div class="container">
+              <div class="row">
+          
+                
+                <div class="col-md-3 mb-3">
+                  <img src="./assets/img/logo.jpg" alt="Logo" width="60" class="mb-2">
+                  <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-x"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+          
+               
+                <div class="col-md-3 mb-3">
+                  <h6><strong>¿Brindás un servicio?</strong></h6>
+                  <ul class="list-unstyled">
+                    <li><a href="registro.html">Registrarse</a></li>
+                    <li><a href="#">Loguearse</a></li>
+                    <li><a href="#">Compartir con amigos</a></li>
+                    <li><a href="#">Administrar Citas</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-3 mb-3">
+                  <h6><strong>Explorar Oficios</strong></h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Plomería</a></li>
+                    <li><a href="#">Electricista</a></li>
+                    <li><a href="#">Desarrollador Web</a></li>
+                    <li><a href="#">Reparador de electrodomésticos</a></li>
+                    <li><a href="#">Carpintería</a></li>
+                    <li><a href="#">Metalúrgica</a></li>
+                    <li><a href="#">Albañilería</a></li>
+                  </ul>
+                </div>
+          
+            
+                <div class="col-md-3 mb-3">
+                  <h6><strong>Necesitás Ayuda</strong></h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Contactá con nosotros</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Protección de datos personales</a></li>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Defensa al consumidor</a></li>
+                  </ul>
+                </div>
+          
+              </div>
+            </div>
+          </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
