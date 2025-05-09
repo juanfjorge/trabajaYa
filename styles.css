@@ -83,7 +83,6 @@ body {
   background-color: #333;
 }
 
-<<<<<<< HEAD
 .planesCard {
   display: grid;
   grid-template-rows: 395px;
@@ -123,8 +122,6 @@ body {
   border-color: #5a5a5a;
 }
 
-=======
->>>>>>> origin/main
 .slogan {
   width: 100%;
   overflow: hidden;
@@ -234,7 +231,6 @@ body {
   gap: 10px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 425px) {
   .loginPage {
     display: flex;
@@ -257,53 +253,3 @@ body {
     flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=styles.css.map */
-=======
-/* ------------------- RESPONSIVE DESIGN ------------------- 
-@media (max-width: 768px) {
-  .slogan {
-    padding-top: 200px;
-    height: 50vh;
-  }
-
-  .slogan p {
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
-
-  .loginPage .card {
-    width: 90%;
-  }
-
-  .ubiYsvc {
-    padding: 10px;
-  }
-
-  .trabajadores {
-    gap: 10px;
-  }
-
-  .footer {
-    text-align: center;
-  }
-
-  .footer .social-icons {
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1400px) {
-  .slogan {
-    background-position: center 52%;
-    padding-top: 500px;
-  }
-
-  .slogan p {
-    font-size: 2.5rem;
-  }
-
-  .loginPage .card {
-    width: 40%;
-  }
-}
-*/
->>>>>>> origin/main
