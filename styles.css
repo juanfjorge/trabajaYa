@@ -9,11 +9,24 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+
 }
 
 .navbar {
-  background-color: #A1A1A1 !important;
+  background-color: #f1f1f1 !important;
+  border-bottom: 1px solid #ccc; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn-light {
+  border: 2px solid black;  
 }
 
 #formularioRegistroTrabajador,
@@ -125,7 +138,7 @@ body {
 .slogan {
   width: 100%;
   overflow: hidden;
-  border-bottom: 7px solid #A1A1A1; /* o el color y grosor que prefieras */
+  border-bottom: 5px solid #A1A1A1; 
 }
 
 .slogan-img {
@@ -135,28 +148,49 @@ body {
 }
 
 .ubiYsvc {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin: 15px 0;
-  padding: 15px;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.trabajadores {
+.filtros {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
   justify-content: center;
-  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filtro-item label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-select {
+  width: 200px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .footer {
   background-color: #A1A1A1;
-  color: white;
+  color: black;
   padding: 30px 20px;
   font-family: 'Poppins', sans-serif;
-  text-align: left;
+  background-color: #f1f1f1 !important;
+  border-top: 1px solid #ccc; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer-content {
@@ -164,7 +198,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-column h6 {
@@ -184,7 +218,7 @@ body {
 }
 
 .footer-column a {
-  color: white;
+  color: grey;
   text-decoration: none;
 }
 
@@ -203,25 +237,13 @@ body {
 }
 
 .footer hr {
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #ccc;
   margin: 20px 0 10px 0;
 }
 
 .footer-bottom {
   text-align: center;
   font-size: 0.9rem;
-}
-
-
-.card-profesional {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-  align-items: flex-start;
-}
-
-.card-profesional .imagen img {
-  object-fit: cover;
 }
 
 .similares {
@@ -232,25 +254,116 @@ body {
   gap: 10px;
 }
 
-@media (max-width: 425px) {
-  .loginPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .loginPage .card {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-  }
-  .planesCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    height: auto;
-    flex-direction: column-reverse;
-  }
-}/*# sourceMappingURL=styles.css.map */
+/* Asegura que el carrusel y los controles se alineen bien */
+#carouselTrabajadores {
+  position: relative;
+  overflow: hidden; /* Oculta las tarjetas que no están visibles */
+  padding-left: 50px; /* Espacio adicional en el lado izquierdo para las flechas */
+}
+
+/* Flechas del carrusel */
+.carousel-control-prev, .carousel-control-next {
+  z-index: 5; /* Asegura que las flechas estén encima del contenido */
+  width: 40px; /* Tamaño ajustado para el área de clic (flecha) */
+  height: 40px; /* Ajusta el tamaño del área de clic a las flechas */
+  position: absolute; /* Asegura que las flechas estén alineadas dentro del carrusel */
+  top: 50%; /* Centra las flechas verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición verticalmente */
+}
+
+/* Flecha izquierda */
+.carousel-control-prev {
+  left: 10px; /* Ajusta la distancia de la flecha izquierda desde el borde */
+}
+
+/* Flecha derecha */
+.carousel-control-next {
+  right: 15px; /* Ajusta la distancia de la flecha derecha desde el borde */
+}
+
+/* Iconos de las flechas */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: black; /* Color de las flechas */
+  width: 100%; /* Asegura que la flecha ocupe todo el área disponible */
+  height: 100%; /* Hace que la flecha ocupe todo el área */
+  background-size: contain; /* Asegura que la flecha no se distorsione */
+  background-repeat: no-repeat; /* Evita que la imagen de la flecha se repita */
+}
+
+/* Hace que solo el área de la flecha sea clickeable */
+.carousel-control-prev, .carousel-control-next {
+  cursor: pointer; /* Asegura que se vea como un botón clickeable */
+}
+
+/* Ajustar las tarjetas dentro del carrusel */
+.carousel-inner {
+  display: flex; /* Hacemos que los elementos sean flexibles */
+  align-items: center; /* Asegura que las tarjetas estén alineadas al centro verticalmente */
+  gap: 20px; /* Controla el espacio entre las tarjetas */
+}
+
+/* Ajuste de las tarjetas dentro del carrusel */
+.carousel-item {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas dentro del carrusel */
+  margin-right: 20px; /* Ajusta la separación a la derecha de las tarjetas */
+  margin-left: 20px;  /* Ajusta la separación a la izquierda de las tarjetas */
+  flex-shrink: 0; /* Impide que las tarjetas se encojan y mantengan su tamaño fijo */
+}
+
+/* Ajuste del tamaño de las tarjetas */
+.carousel-item .card {
+  width: 18rem; /* Ancho fijo de la tarjeta */
+  height: 25rem; /* Alto fijo de la tarjeta */
+  margin: 0 10px; /* Ajuste el espacio entre tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para las tarjetas */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Ajuste del contenido de la tarjeta */
+.card-body {
+  height: calc(100% - 40px); /* Ajustar el alto para que el contenido se ajuste dentro del tamaño fijo */
+  overflow-y: auto; /* Hacer que el contenido en exceso tenga scroll si es necesario */
+}
+
+/* Carrusel interno */
+.carousel-inner {
+  overflow-x: hidden; /* Oculta el contenido que sobresale por los lados */
+}
+
+/* Estilos de la sección de trabajadores */
+.trabajadores {
+  margin-top: 2rem; /* Espacio superior */
+  padding: 1rem;
+}
+
+/* Estilo de la tarjeta de imagen */
+.card-img-top {
+  object-fit: cover;
+  height: 12rem; /* Altura fija para las imágenes */
+}
+
+/* Estilos adicionales dentro de la tarjeta */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 13rem; /* Asegura que el contenido de la tarjeta esté equilibrado */
+}
+
+.card-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 5px;
+}

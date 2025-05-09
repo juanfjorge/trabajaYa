@@ -15,29 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
+                      <!--Barra de Menú-->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                   <img src="./assets/img/logo-removebg-preview.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-center">TrabajaYa</a>
-                
-                <form class="d-flex mt-3 w-50" role="search">
-                    <input class="form-control me-2" type="search"
-                    placeholder="Buscar servicio o nombre del trabajador..." aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Menú con categorías -->
+                  <form class="d-flex mt-3 align-items-center w-50  me-2" role="search">
+                    <input class="form-control form-control-sm me-2 w-75 rounded-pill px-3" type="search" placeholder="Buscar servicio o nombre del trabajador...">
+                    <button class="btn btn-sm btn-secondary rounded-pill px-3">Buscar</button>
+                  </form>
                     <div class="dropdown ms-3">
                       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorias
@@ -53,91 +40,161 @@
                       </ul>
                     </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <button type="button" class="btn btn-danger"style="margin-left: 20px;">Planes</button>
                 </div>
               </div>
                 <div class="d-flex">
-                    <a href="login.html" class="btn btn btn-light me-2">Entrar</a>
-                    <a href="registro.html" class="btn btn-dark">Registrarse</a>
+                  <button type="button" class="btn btn-light me-2">Entrar</button>
+                  <a href="registro.html" class="btn btn-dark">Registrarse</a>
                 </div>
           </nav>
     </header>
-
+                      <!--Slogan imagen-->
     <section class="slogan">
       <img src="/assets/img/slogan.jpg" alt="slogan" class="slogan-img">
     </section>
-    
-        <div class="ubiYsvc">
-            <h2>Navega por los servicios aqui abajo:</h2>
-            <p>Mostrando en <b>Mendoza</b> y al rededores</p>
-            <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-map-pin"></i>  Cambiar Ubiciacion</button>
-            
-            <p>Mostrando <b>todos</b> los servicios</p>
-            <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-wrench"></i>    Cambiar Categoria</button>
-        </div>
+                          <!--Filtros zona y categoria-->
+    <div class="ubiYsvc">
+      <h2>Buscar por zona y categoria</h2>
+      <div class="filtros">
+          <!-- Filtro de Zona -->
+          <div class="filtro-item">
+              <label for="zona">Zona</label>
+              <select id="zona" class="form-select">
+                  <option value="todas">Todas las zonas</option>
+                  <option value="ciudad">Ciudad</option>
+                  <option value="lujan">Lujan de cuyo</option>
+                  <option value="godoy-cruz">Godoy Cruz</option>
+                  <option value="maipu">Maipú</option>
+                  <option value="guaymallen">Guaymallén</option>
+                  <option value="las-heras">Las Heras</option>
+              </select>
+          </div>
+          <!-- Filtro de Servicio -->
+          <div class="filtro-item">
+              <label for="servicio">Categoria</label>
+              <select id="servicio" class="form-select">
+                  <option value="todos">Todos los servicios</option>
+                  <option value="hogar">Hogar</option>
+                  <option value="jardin">Jardín</option>
+                  <option value="bienestar">Bienestar y estética</option>
+                  <option value="cuidado-familia">Cuidado personal y familia</option>
+                  <option value="prof-particulares">Profesores particulares</option>
+              </select>
+          </div>
+      </div>
+      <button type="button" class="btn btn-danger mt-3">Aplicar filtros</button>
+    </div>
+                        <!--Tarjetas de trabajadores-->
+                        <section class="trabajadores">
+                          <div id="carouselTrabajadores" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                              <!-- Primer ítem (activo) -->
+                              <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                  <!-- Tarjeta 1 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <a href="trabajador.html">
+                                      <div class="card" style="width: 20rem;">
+                                        <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                        <div class="card-body">
+                                          <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
+                                          <h3 class="card-title">Jose Quevedo</h3>
+                                          <p class="card-text">Profesion: <b>Electricista</b></p>
+                                          <p class="card-text">Ubiciacion: <b>Ciudad de Mendoza, Mendoza</b></p>
+                                          <p class="card-text">Profesional especializado en instalaciones eléctricas, mantenimiento y reparación de sistemas eléctricos residenciales, comerciales e industriales.</p>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                  <!-- Tarjeta 2 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <div class="card" style="width: 20rem;">
+                                      <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                      <div class="card-body">
+                                        <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
+                                        <h3 class="card-title">Juan Roman</h3>
+                                        <p class="card-text">Profesion: <b>Maestro Mayor de Obra</b></p>
+                                        <p class="card-text">Ubiciacion: <b>Lujan de Cuyo, Mendoza</b></p>
+                                        <p class="card-text">Experto en construcción, refacciones y trabajos de obra. Ideal para reformas grandes o pequeñas, ampliaciones y mantenimiento general.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Tarjeta 3 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <div class="card" style="width: 20rem;">
+                                      <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
+                                      <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                      <div class="card-body">
+                                        <h3 class="card-title">Jose Quinteros</h3>
+                                        <p class="card-text">Profesion: <b>Plomero</b></p>
+                                        <p class="card-text">Ubiciacion: <b>Lujan de Cuyo, Mendoza</b></p>
+                                        <p class="card-text">Encargado de la instalación y reparación de cañerías de agua, gas y desagües. Atiende tanto emergencias como trabajos planificados.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <!-- Segundo ítem -->
+                              <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                  <!-- Tarjeta 4 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <div class="card" style="width: 20rem;">
+                                      <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                      <div class="card-body">
+                                        <h3 class="card-title">Franco Armanqui</h3>
+                                        <p class="card-text">Profesion: <b>Carpintero</b></p>
+                                        <p class="card-text">Ubiciacion: <b>La Boca, Buenos Aires</b></p>
+                                        <p class="card-text">Profesional dedicado a la creación, reparación e instalación de elementos de madera para interiores y exteriores.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Tarjeta 5 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <div class="card" style="width: 20rem;">
+                                      <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                      <div class="card-body">
+                                        <h3 class="card-title">Carlos Palacios</h3>
+                                        <p class="card-text">Profesion: <b>Servicio de Limpieza</b></p>
+                                        <p class="card-text">Ubiciacion: <b>Maipu, Mendoza</b></p>
+                                        <p class="card-text">Equipo especializado en limpieza profunda y mantenimiento para hogares, oficinas o locales comerciales.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Tarjeta 6 -->
+                                  <div class="col-12 col-md-4 mb-4">
+                                    <div class="card" style="width: 20rem;">
+                                      <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
+                                      <div class="card-body">
+                                        <h3 class="card-title">Santino Andino</h3>
+                                        <p class="card-text">Profesion: <b>Servicio de Reparacion de computadoras</b></p>
+                                        <p class="card-text">Ubiciacion: <b>Maipu, Mendoza</b></p>
+                                        <p class="card-text">Especialista en diagnóstico, reparación y mantenimiento de computadoras de escritorio, notebooks y redes domésticas o empresariales.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                            <!-- Controles de navegación -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrabajadores" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselTrabajadores" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        </section>
+                        
+                        
+                        
 
-        <section class="trabajadores">
-            <a href="trabajador.html"><div class="card" style="width: 20rem;">
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
-                  <h3 class="card-title">Jose Quevedo</h3> 
-                  <p class="card-text">Profesion: <b>Electricista</b></p>
-                  <p class="card-text">Ubiciacion: <b>Ciudad de Mendoza, Mendoza</b></p>
-                  <p class="card-text">Profesional especializado en instalaciones eléctricas, mantenimiento y reparación de sistemas eléctricos residenciales, comerciales e industriales.</p>
-                </div>
-            </div></a>
-            <div class="card" style="width: 20rem;">
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                    <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>  
-                  <h3 class="card-title">Juan Roman</h3>
-                  <p class="card-text">Profesion: <b>Maestro Mayor de Obra</b></p>
-                  <p class="card-text">Ubiciacion: <b>Lujan de Cuyo, Mendoza</b></p>
-                  <p class="card-text">Experto en construcción, refacciones y trabajos de obra. Ideal para reformas grandes o pequeñas, ampliaciones y mantenimiento general.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                  <h3 class="card-title">Jose Quinteros</h3>
-                  <p class="card-text">Profesion: <b>Plomero</b></p>
-                  <p class="card-text">Ubiciacion: <b>Lujan de Cuyo, Mendoza</b></p>
-                  <p class="card-text">Encargado de la instalación y reparación de cañerías de agua, gas y desagües. Atiende tanto emergencias como trabajos planificados.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                  <h3 class="card-title">Franco Armanqui</h3>
-                  <p class="card-text">Profesion: <b>Carpintero</b></p>
-                  <p class="card-text">Ubiciacion: <b>La Boca, Buenos Aires</b></p>
-                  <p class="card-text">Profesional dedicado a la creación, reparación e instalación de elementos de madera para interiores y exteriores.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                  <h3 class="card-title">Carlos Palacios</h3>
-                  <p class="card-text">Profesion: <b>Servicio de Limpieza</b></p>
-                  <p class="card-text">Ubiciacion: <b>Maipu, Mendoza</b></p>
-                  <p class="card-text">Equipo especializado en limpieza profunda y mantenimiento para hogares, oficinas o locales comerciales.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
-                <div class="card-body">
-                  <h3 class="card-title">Santino Andino</h3>
-                  <p class="card-text">Profesion: <b>Servicio de Reparacion de computadoras</b></p>
-                  <p class="card-text">Ubiciacion: <b>Maipu, Mendoza</b></p>
-                  <p class="card-text">Especialista en diagnóstico, reparación y mantenimiento de computadoras de escritorio, notebooks y redes domésticas o empresariales.</p>
-                </div>
-            </div>
-            
-            
-        </section>
-
-
+                      <!--Pie de pagina-->
         <footer class="footer">
           <div class="footer-content">
             <div class="footer-column">
@@ -149,7 +206,6 @@
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
-
             <div class="footer-column">
               <h6>Explorá categorías</h6>
               <ul>
@@ -161,35 +217,27 @@
                 <li><a href="#">Profesores particulares</a></li>
               </ul>
             </div>
-        
             <div class="footer-column">
               <h6>Enlaces Útiles</h6>
               <ul>
                 <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Conocé nuestros planes</a></li>
                 <li><a href="#">Ayuda</a></li>
               </ul>
             </div>
-        
             <div class="footer-column">
               <h6>Contacto</h6>
               <p>Email: contacto@trabajaya.com</p>
               <p>Tel: +54 11 1234 5678</p>
             </div>
-        
-
           </div>
-        
           <hr />
-        
           <div class="footer-bottom">
             <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
           </div>
-        </footer>
-        
-        
-      
+        </footer> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
