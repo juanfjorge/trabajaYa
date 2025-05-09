@@ -173,6 +173,23 @@
     flex-direction: column;
   }
 }
+.planesCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
+.planesCard .cardBasico {
+  background-color: #a1a1a1;
+  text-decoration: none;
+}
+.planesCard .cardPremium {
+  color: white;
+}
+
 .slogan {
   background-image: url(./assets/img/manosImagen.jpeg);
   background-size: cover; /* Hace que la imagen cubra todo */

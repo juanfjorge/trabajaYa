@@ -178,6 +178,23 @@
   
 }
 
+.planesCard{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  .cardBasico{
+    background-color: #a1a1a1;
+    text-decoration: none;
+  }
+  .cardPremium{
+    color: white;
+  }
+}
+
 
 
 .slogan{
