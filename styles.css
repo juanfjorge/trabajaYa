@@ -113,33 +113,65 @@ body {
 }
 
 .footer {
-  margin-top: 15px;
-  background-color: #A1A1A1 !important;
-  padding: 20px;
-}
-
-.footer a {
-  text-decoration: none;
+  background-color: #A1A1A1;
   color: white;
+  padding: 30px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer a:hover {
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-column h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
   text-decoration: underline;
 }
 
-.footer h6 {
-  margin-bottom: 1rem;
-}
-
-.footer .social-icons a {
+.social-icons a {
+  color: black;
+  margin: 0 8px;
   font-size: 1.2rem;
-  margin-right: 10px;
-  color: #212529;
 }
 
-.footer .social-icons a:hover {
+.social-icons a:hover {
   color: #0d6efd;
 }
+
+.footer hr {
+  border-top: 1px solid #ccc;
+  margin: 20px 0 10px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 
 .card-profesional {
   background-color: #fff;
@@ -158,7 +190,6 @@ body {
   flex-direction: row;
   margin: 5px;
   gap: 10px;
-<<<<<<< HEAD
 }
 
 /* ------------------- RESPONSIVE DESIGN ------------------- 
@@ -209,6 +240,3 @@ body {
   }
 }
 */
-=======
-}/*# sourceMappingURL=styles.css.map */
->>>>>>> ramaNuevaFran
