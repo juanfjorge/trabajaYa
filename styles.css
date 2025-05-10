@@ -9,8 +9,16 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f5f3ef; 
 
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar {
@@ -258,9 +266,18 @@ body {
 #carouselTrabajadores {
   position: relative;
   overflow: hidden; /* Oculta las tarjetas que no están visibles */
-  padding-left: 50px; /* Espacio adicional en el lado izquierdo para las flechas */
+  margin:50px 0 ;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: scale(1.03); /* Leve aumento */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  z-index: 1;
+  border: 1px solid #c0a98f; /* Verde Bootstrap, o el color que uses */
+}
 /* Flechas del carrusel */
 .carousel-control-prev, .carousel-control-next {
   z-index: 5; /* Asegura que las flechas estén encima del contenido */
@@ -273,7 +290,7 @@ body {
 
 /* Flecha izquierda */
 .carousel-control-prev {
-  left: 10px; /* Ajusta la distancia de la flecha izquierda desde el borde */
+  left: 15px; /* Ajusta la distancia de la flecha izquierda desde el borde */
 }
 
 /* Flecha derecha */
@@ -300,70 +317,109 @@ body {
   display: flex; /* Hacemos que los elementos sean flexibles */
   align-items: center; /* Asegura que las tarjetas estén alineadas al centro verticalmente */
   gap: 20px; /* Controla el espacio entre las tarjetas */
+  padding-left: 100px;
 }
 
 /* Ajuste de las tarjetas dentro del carrusel */
-.carousel-item {
-  display: flex;
-  justify-content: center; /* Centra las tarjetas dentro del carrusel */
-  margin-right: 20px; /* Ajusta la separación a la derecha de las tarjetas */
-  margin-left: 20px;  /* Ajusta la separación a la izquierda de las tarjetas */
-  flex-shrink: 0; /* Impide que las tarjetas se encojan y mantengan su tamaño fijo */
+.carousel-item  {
+  padding-top: 10px;
 }
 
-/* Ajuste del tamaño de las tarjetas */
+/* Ajuste de las tarjetas dentro del carrusel */
 .carousel-item .card {
-  width: 18rem; /* Ancho fijo de la tarjeta */
-  height: 25rem; /* Alto fijo de la tarjeta */
+  width: 20rem; /* Ancho fijo de la tarjeta */
+  height: 30rem; /* Ajuste de altura fija (ajusta el valor según sea necesario) */
   margin: 0 10px; /* Ajuste el espacio entre tarjetas */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para las tarjetas */
   border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que el contenido se desborde fuera de la tarjeta */
+  position: relative;
+  z-index: 1; /* Asegura que la tarjeta esté encima del contenedor */
 }
 
-/* Ajuste del contenido de la tarjeta */
+/* Estilos para las flechas de deslizamiento */
+.carousel-control-prev, .carousel-control-next {
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y transparente */
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Flechas con animación y efecto al hacer hover */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Cambia el fondo al hacer hover */
+  transform: translateY(-50%) scale(1.2); /* Aumenta el tamaño ligeramente */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3); /* Sombra alrededor */
+}
+
+/* Flechas usando Font Awesome */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  font-size: 20px;
+  color: #fff; /* Color blanco para las flechas */
+}
+
+/* Flecha anterior */
+.carousel-control-prev-icon {
+  content: '\f104'; /* Código Unicode para la flecha hacia la izquierda */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+/* Flecha siguiente */
+.carousel-control-next-icon {
+  content: '\f105'; /* Código Unicode para la flecha hacia la derecha */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+
+.carousel-item .card-body {
+  flex-grow: 1; /* Permite que el contenido se ajuste a la altura disponible */
+  overflow-y: auto; /* Hace que aparezca una barra de desplazamiento si el contenido excede el espacio */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Deshabilitar clics fuera de la tarjeta */
+.carousel-item {
+  pointer-events: none; /* Deshabilita clics fuera de las tarjetas */
+}
+
+/* Habilitar clic solo en las tarjetas */
+.carousel-item .card {
+  pointer-events: auto; /* Habilita clic solo dentro de la tarjeta */
+}
+
+/* Asegurar que el enlace tenga el estilo adecuado */
+.carousel-item .card a {
+  display: block;
+  height: 100%;
+}
+
 .card-body {
-  height: calc(100% - 40px); /* Ajustar el alto para que el contenido se ajuste dentro del tamaño fijo */
-  overflow-y: auto; /* Hacer que el contenido en exceso tenga scroll si es necesario */
+  height: 300px; /* o lo que prefieras */
+  overflow-y: auto;
+  padding-top: 3rem; /* Espacio para que el sticky no se superponga */
+  padding-bottom: 16px; /* o el valor que mejor se vea */
+
 }
 
-/* Carrusel interno */
-.carousel-inner {
-  overflow-x: hidden; /* Oculta el contenido que sobresale por los lados */
-}
-
-/* Estilos de la sección de trabajadores */
-.trabajadores {
-  margin-top: 2rem; /* Espacio superior */
-  padding: 1rem;
-}
-
-/* Estilo de la tarjeta de imagen */
-.card-img-top {
-  object-fit: cover;
-  height: 12rem; /* Altura fija para las imágenes */
-}
-
-/* Estilos adicionales dentro de la tarjeta */
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 13rem; /* Asegura que el contenido de la tarjeta esté equilibrado */
-}
-
-.card-body h3 {
-  font-size: 1.2rem;
+.card-title {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Fondo para que no se mezcle al hacer scroll */
+  padding: 0.5rem 0;
+  z-index: 1;
   font-weight: bold;
-}
-
-.card-body p {
-  font-size: 0.9rem;
-}
-
-.badge {
-  font-size: 0.9rem;
-  padding: 5px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
 }
