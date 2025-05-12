@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .logo-home {
   height: 30px;
   width: auto;
@@ -6,96 +5,38 @@
   cursor: pointer;
 }
 
-.slogan {
-  text-align: center;
-  padding: 50px 20px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f3ef;
 }
 
-.logo-name {
-  width: 200px;
-  max-width: 80%;
-  margin-bottom: 20px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  background-color: #333;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu > li > a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
+a {
   text-decoration: none;
+  color: inherit;
 }
-
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  z-index: 999;
-  min-width: 200px;
-}
-
-.submenu li a {
-  padding: 10px 20px;
-  display: block;
-  color: white;
+a.card {
   text-decoration: none;
+  color: inherit;
 }
 
-/* Mostrar submenu al pasar el mouse */
-.dropdown:hover > .submenu {
-  display: block;
+.navbar {
+  background-color: #f1f1f1 !important;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-sub {
-  position: relative;
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn-light {
+  border: 2px solid black;
 }
 
-/* Sub-submenu a la derecha */
-.dropdown-sub:hover > .submenu {
-  display: block;
-  top: 0;
-  left: 100%;
-}
-
-/* Efectos hover */
-.menu > li:hover > a,
-.submenu li a:hover {
-  background-color: #555;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los ítems */
-  background-color: #333;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu .cuenta {
-  margin-left: auto; /* Empuja este ítem a la derecha */
-}
-
-#formularioRegistroTrabajador, #formularioRegistroUsuario {
+#formularioRegistroTrabajador,
+#formularioRegistroUsuario {
   padding: 5px;
   align-items: center;
   justify-content: center;
@@ -122,11 +63,6 @@
 .elegirUser .btn-check:checked + .btn-selector {
   background-color: #e4e4e4;
   color: black;
-  border-radius: 10px;
-  border: none;
-}
-.elegirUser #row + .g-3 {
-  background-color: #444;
 }
 
 .loginPage {
@@ -137,7 +73,7 @@
   margin-left: 10px;
 }
 .loginPage .card {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -160,110 +96,103 @@
   background-color: #333;
 }
 
-.planesCard {
-  display: grid;
-  grid-template-rows: 395px;
-  grid-template-columns: 394px 394px 394px;
-  justify-content: center;
-  gap: 10px;
+.slogan {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 5px solid #A1A1A1;
+}
+.slogan-img {
   width: 100%;
   height: auto;
-}
-.planesCard .cardBasico {
-  width: 350px;
-  height: 395px;
-}
-.planesCard .cardPremium {
-  color: white;
-  align-items: center;
-  text-align: center;
-  width: 350px;
-  height: 395px;
-}
-
-.preguntas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-.preguntas .accordion {
-  width: 50%;
-}
-.preguntas .accordion-button:not(.collapsed) {
-  background-color: white;
-  color: black;
-  border: 1.5px;
-  border-style: solid;
-  border-color: #5a5a5a;
-}
-
-.slogan {
-  background-image: url(./assets/img/manosImagen.jpeg);
-  background-size: cover; /* Hace que la imagen cubra todo */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto; /* 100% del alto visible de la pantalla */
-  color: white;
+  display: block;
 }
 
 .ubiYsvc {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 15px;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.trabajadores {
+.filtros {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
   justify-content: center;
-  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.filtros-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filtros-item label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-select {
+  width: 200px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .footer {
-  margin-top: 15px;
+  background-color: #A1A1A1;
+  color: black;
+  padding: 30px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1 !important;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.footer a {
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+.footer-column h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column ul li {
+  margin: 5px 0;
+}
+.footer-column ul a {
+  color: grey;
   text-decoration: none;
-  color: #212529;
 }
-
-.footer a:hover {
+.footer-column ul a:hover {
   text-decoration: underline;
 }
-
-.footer h6 {
-  margin-bottom: 1rem;
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer hr {
+  border-top: 2px solid #ccc;
+  margin: 20px 0 10px 0;
 }
 
-.footer .social-icons a {
+.social-icons a {
+  color: black;
+  margin: 0 8px;
   font-size: 1.2rem;
-  margin-right: 10px;
-  color: #212529;
 }
-
-.footer .social-icons a:hover {
+.social-icons a:hover {
   color: #0d6efd;
-}
-
-.card-profesional {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-  align-items: flex-start;
-}
-
-.card-profesional .imagen img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .similares {
@@ -274,19 +203,167 @@
   gap: 10px;
 }
 
+#carouselTrabajadores {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0;
+}
+#carouselTrabajadores .carousel-control-prev,
+#carouselTrabajadores .carousel-control-next {
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#carouselTrabajadores .carousel-control-prev-icon,
+#carouselTrabajadores .carousel-control-next-icon {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#carouselTrabajadores .carousel-control-prev {
+  left: 15px;
+}
+#carouselTrabajadores .carousel-control-next {
+  right: 15px;
+}
+#carouselTrabajadores .carousel-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 100px;
+}
+#carouselTrabajadores .carousel-item {
+  padding-top: 10px;
+  pointer-events: none;
+}
+#carouselTrabajadores .carousel-item .card {
+  width: 20rem;
+  height: 30rem;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: auto;
+  border: 1px solid transparent;
+}
+#carouselTrabajadores .carousel-item .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-color: #c0a98f;
+}
+#carouselTrabajadores .carousel-item .card a {
+  display: block;
+  height: 100%;
+}
+#carouselTrabajadores .carousel-item .card-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  padding-top: 3rem;
+  padding-bottom: 16px;
+}
+#carouselTrabajadores .carousel-item .card-title {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 0.5rem 0;
+  z-index: 1;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+#carouselTrabajadores .carousel-control-prev,
+#carouselTrabajadores .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#carouselTrabajadores .carousel-control-prev:hover,
+#carouselTrabajadores .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+}
+#carouselTrabajadores .carousel-control-prev-icon,
+#carouselTrabajadores .carousel-control-next-icon {
+  font-size: 20px;
+  color: #fff;
+}
+#carouselTrabajadores .carousel-control-prev-icon {
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#carouselTrabajadores .carousel-control-next-icon {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.bodyPlanes .planesCard {
+  display: grid;
+  grid-template-rows: 395px;
+  grid-template-columns: repeat(3, 394px);
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
+.bodyPlanes .planesCard .cardBasico {
+  width: 350px;
+  height: 395px;
+}
+.bodyPlanes .planesCard .cardPremium {
+  color: white;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  height: 395px;
+}
+.bodyPlanes .preguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.bodyPlanes .preguntas .accordion {
+  width: 50%;
+}
+.bodyPlanes .preguntas .accordion-button:not(.collapsed) {
+  background-color: white;
+  color: black;
+  border: 1.5px solid #5a5a5a;
+}
 @media (max-width: 425px) {
-  .loginPage {
+  .bodyPlanes .loginPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .loginPage .card {
+  .bodyPlanes .loginPage .card {
     width: 70%;
     display: flex;
     flex-direction: column;
   }
-  .planesCard {
+}
+@media (max-width: 425px) {
+  .bodyPlanes .planesCard {
     display: flex;
     align-items: center;
     justify-content: center;
