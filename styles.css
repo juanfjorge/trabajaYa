@@ -325,6 +325,7 @@ a.card {
   width: 100%;
   height: auto;
   margin-left: 40px;
+  font-size: 17px;
 }
 .bodyPlanes .planesCard .cardBasico {
   width: 350px;
