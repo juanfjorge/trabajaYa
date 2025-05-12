@@ -63,7 +63,8 @@ a {
 .elegirUser {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  align-items: center;
+  margin-top: 20px;
 
   .btn-selector {
     background-color: transparent;
@@ -73,6 +74,7 @@ a {
     border-radius: 10px;
     border: none;
     transition: 0.3s;
+    
   }
 
   .btn-check:checked + .btn-selector {
@@ -367,13 +369,14 @@ a {
 .bodyPlanes {
   .planesCard {
     display: grid;
-    grid-template-rows: 395px;
+    grid-template-rows: 400px;
     grid-template-columns: repeat(3, 394px);
     justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 100%;
     height: auto;
-
+    margin-left: 40px;
     .cardBasico {
       width: 350px;
       height: 395px;

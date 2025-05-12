@@ -49,7 +49,8 @@ a.card {
 .elegirUser {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  align-items: center;
+  margin-top: 20px;
 }
 .elegirUser .btn-selector {
   background-color: transparent;
@@ -316,12 +317,14 @@ a.card {
 
 .bodyPlanes .planesCard {
   display: grid;
-  grid-template-rows: 395px;
+  grid-template-rows: 400px;
   grid-template-columns: repeat(3, 394px);
   justify-content: center;
+  align-items: center;
   gap: 10px;
   width: 100%;
   height: auto;
+  margin-left: 40px;
 }
 .bodyPlanes .planesCard .cardBasico {
   width: 350px;
