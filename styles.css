@@ -378,22 +378,10 @@ a.card {
     
     
   }
-<<<<<<< HEAD
   .panelTrabajo .opcionesPc{
     display: none;
 
   }
-}/*# sourceMappingURL=styles.css.map */
-
-/*pagina panel trabajadores*/
-
-@media (min-width: 426px) {
-  .panelTrabajo .opcionesCel{
-    display: none;
-
-  }
-}
-=======
 }/*# sourceMappingURL=styles.css.map */
 
 
@@ -505,4 +493,13 @@ main h1, main h2, main h3, .categorias-grid {
   color: #333;
 }
 
->>>>>>> 3d9b90379f37b63b57d3c9e66a3be9284db8c2c9
+
+
+/*pagina panel trabajadores*/
+
+@media (min-width: 426px) {
+  .panelTrabajo .opcionesCel{
+    display: none;
+
+  }
+}
