@@ -17,37 +17,31 @@
                       <!--Barra de Menú-->
                       <header class="sticky-top">
                         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
-                            <div class="container-fluid">
-                                <a class="navbar-brand" href="index.html">
-                                  <img src="./assets/img/logo-removebg-preview.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-center">TrabajaYa</a>
-                                  <form class="d-flex mt-3 align-items-center w-50  me-2" role="search">
-                                    <input class="form-control form-control-sm me-2 w-75 rounded-pill px-3" type="search" placeholder="Buscar servicio o nombre del trabajador...">
-                                    <button class="btn btn-sm btn-secondary rounded-pill px-3">Buscar</button>
-                                  </form>
-                                    <div class="dropdown ms-3">
-                                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Categorias
-                                      </a>
-                                    
-                                      <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=hogar">Hogar</a></li>
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=jardin">Jardin</a></li>
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=mascotas">Mascotas</a></li>
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=bienestar">Bienestar y estética</a></li>
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=cuidado">Cuidado personal y familia</a></li>
-                                        <li><a class="dropdown-item" href="categorias.html?categoria=profesores">Profesores particulares</a></li>
-                                      </ul>
-                                    </div>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                  <a href="./planes.html"><button type="button" class="btn btn-danger"style="margin-left: 20px;">Planes</button></a>
-                                </div>
-                              </div>
-                                <div class="d-flex">
-                                  <a href="login.html" class="btn btn-light me-2">Entrar</button>
-                                    <a href="registro.html" class="btn btn-dark">Registrarse</a>
-                                </div>
-                          </nav>
-                    </header>
+                          <div class="container-fluid d-flex justify-content-between align-items-center">
+                            
+                            <!-- Logo y nombre -->
+                            <a class="navbar-brand" href="index.html">
+                              <img src="./assets/img/logo-removebg-preview.png" alt="Logo" width="60" class="d-inline-block align-text-center">
+                              TrabajaYa
+                            </a>
+                            
+                            <!-- Botón de Inicio alineado a la izquierda -->
+                            <a href="index.html" class="btn btn-secondary">Inicio</a>
+                            
+                            <!-- Botones a la derecha -->
+                            <div class="ms-auto d-flex">
+                              <!-- Botón de Planes -->
+                              <a href="./planes.html" class="btn btn-danger me-3">Planes</a>
+                              
+                              <!-- Botones de usuario -->
+                              <a href="login.html" class="btn btn-light me-2">Entrar</a>
+                              <a href="registro.html" class="btn btn-dark">Registrarse</a>
+                            </div>
+                            
+                          </div>
+                        </nav>
+                      </header>
+                      
 
   <main>
     <section class="categoria-filtros">
@@ -125,6 +119,8 @@
 
 
   <script>
+
+
     const serviciosPorCategoria = {
       hogar: ['Plomero', 'Electricista', 'Gasista', 'Pintor', 'Albañil', 'Limpiadora Doméstica', 'Cocinero Particular'],
       jardin: ['Jardinero', 'Limpiador de piletas'],
@@ -200,6 +196,37 @@ grid.innerHTML = servicios.map(serv => `
       }
     }
   }
+
+
+  const params = new URLSearchParams(window.location.search);
+const busqueda = params.get('busqueda');
+
+if (busqueda) {
+  // Buscar en qué categoría está el servicio
+  for (const [categoria, servicios] of Object.entries(serviciosPorCategoria)) {
+    if (servicios.map(s => s.toLowerCase()).includes(busqueda)) {
+      // Simular click en la categoría
+      const btnCategoria = document.querySelector(`[data-categoria="${categoria}"]`);
+      if (btnCategoria) {
+        btnCategoria.click();
+
+        // Esperar a que se carguen los botones de servicio y hacer click en el correcto
+        setTimeout(() => {
+          const btnServicio = Array.from(document.querySelectorAll('.btn-servicio'))
+            .find(btn => btn.textContent.toLowerCase() === busqueda);
+          btnServicio?.click();
+
+          // Agregar mensaje visual
+          const h2 = document.querySelector('h2');
+          if (h2) {
+            h2.textContent = `Servicios disponibles para ${busqueda.charAt(0).toUpperCase() + busqueda.slice(1)}:`;
+          }
+        }, 300);
+      }
+      break;
+    }
+  }
+}
 
   </script>
 </body>
