@@ -375,5 +375,20 @@ a.card {
     width: 100%;
     height: auto;
     flex-direction: column-reverse;
+    
+    
+  }
+  .panelTrabajo .opcionesPc{
+    display: none;
+
   }
 }/*# sourceMappingURL=styles.css.map */
+
+/*pagina panel trabajadores*/
+
+@media (min-width: 426px) {
+  .panelTrabajo .opcionesCel{
+    display: none;
+
+  }
+}
