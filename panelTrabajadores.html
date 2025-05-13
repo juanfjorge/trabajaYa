@@ -40,20 +40,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <a href="./planes.html"><button type="button" class="btn btn-danger"style="margin-left: 20px;">Planes</button></a>
             </div>
-          </div>
-            <div class="d-flex">
-             
-                <a href="registro.html" class="btn btn-dark">Cerrar Sesion</a>
-            </div>
-      </nav>
+        </div>
+        <div class="d-flex">
+            
+            <a href="registro.html" class="btn btn-dark">Cerrar Sesion</a>
+        </div>
+    </nav>
 </header>
-    
+
+<h3 class="tituloPanel">Bienvenido -nombre del trabajador-</h3>
 <div class="panelTrabajo">
     <ul class="opcionesPc">
 
         <div class="btn-group btn-group-lg w-100 mt-3" role="group" aria-label="Basic radio toggle button group">
+            
+            <!-- dependiendo del plan  -->
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-danger" for="btnradio1">Inicio</label>
+            <label class="btn btn-outline-danger" for="btnradio1">Crear nuevo servicio</label>
           
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
             <label class="btn btn-outline-danger" for="btnradio2">Mensajes</label>
@@ -63,10 +66,6 @@
 
             <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
             <label class="btn btn-outline-danger" for="btnradio4">Reseñas recibidas</label>
-            
-            <!-- dependiendo del plan  -->
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio5">Crear nuevo servicio</label>
         
         
         </div>
@@ -74,7 +73,7 @@
     </ul>
     <div class="opcionesCel">
 
-        <nav class="navbar navbar-light bg-light w-100">
+        <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -87,21 +86,18 @@
                 </div>
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <!-- segun plan -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Crear Nuevo servicio</a>
+                      </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Mensajes</a>
+                        <a class="nav-link" href="#">Mensajes</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Administrar Publicacion de Servicio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Reseñas recibidas</a>
-                    </li>
-                    <!-- segun plan -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Crear Nuevo servicio</a>
                     </li>
                     
                   </ul>
@@ -113,17 +109,130 @@
 
     </div>
 
-    <section class="inicio">
-        <h3>Bienvenido -nombre del trabajador-</h3>
+    <section id="crearSvc">
         <hr>
-
-
         
+        
+        
+        
+        
+        <div class="formulario">
+            <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputText2" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Ingrese el titulo de la publicaion aqui" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="inputCity" required>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="exampleFormControlTextarea1" class="form-label">Ingrese descripcion de Usted y su trabajo</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-6">
+                      <label for="inputState" class="form-label">Seleccione su categoria</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Elegir</option>
+                        <option>Hogar</option>
+                        <option>Educacion</option>
+                        <option>Jardin</option>
+                        <option>Mascotas</option>
+                        <option>Bienestar y estetica</option>
+                        <option>Cuidado personal y familiar</option>
+                        <option>Profesor particular</option>
+                        <option>Otro</option>
+                      </select>
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <label for="formFileSm" class="form-label">Cargar Fotos de sus trabajos </label>
+                        <input class="form-control form-control-sm" id="formFileSm" type="file" required>
+                        
+                    </div>
+
+                
+            </form>
+            </div>
+
+            <div id="vistaPrevia">
+                <h2>Vista previa de su publiacion:</h2>
+                <div class="card-profesional d-flex border p-3 rounded">
+                    <div class="imagen me-3">
+                        <img src="./assets/img/personaEjemplo.jpg" alt="Imagen profesional" class="img-fluid rounded" style="width: 700px; height: auto;">
+                    </div>
+                <div class="contenido flex-grow-1">
+                  <h6 class="text-muted mb-1"></h6>
+                  <!-- si tiene plan red: -->
+                  <span class="badge bg-success mb-2">Recomendado</span>
+                  <h4 class="fw-bold"></h4>
+                  <div class="descripcion p-2 mb-2" style="font-size: 0.9rem;">
+                    <p class="mb-1"></p>
+                  </div>
+                  <p class="mb-1 mt-3"><strong>Ubicación:</strong></p>
+                  <button class="btn btn-dark w-50">Coordinar Visita</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    
+            <button type="button" class="btn btn-warning"><-Volver</button>
+            <button type="button" class="btn btn-success">Siguiente -></button>
+        </div>
     </section>
 
+    <script>
 
+        document.querySelector('.btn-warning').addEventListener('click', function () {
+            const vistaPrevia =document.getElementById('vistaPrevia');
+            const formulario = document.getElementsByClassName('formulario')[0];
 
+            vistaPrevia.style.display = "none";
+            formulario.style.display = "block";
+        });
+        document.querySelector('.btn-success').addEventListener('click', function () {
+            // Obtener valores del formulario
+            const titulo = document.getElementById('inputAddress2').value;
+            const ciudad = document.getElementById('inputCity').value;
+            const descripcion = document.getElementById('exampleFormControlTextarea1').value;
+            const servicio = document.getElementById('inputState').value;
+            const imagenInput = document.getElementById('formFileSm');
+            const vistaPrevia =document.getElementById('vistaPrevia');
+            const formulario = document.getElementsByClassName('formulario')[0];
 
+            // Seleccionar elementos de vista previa
+            const cardTitulo = document.querySelector('.contenido h6');
+            const cardNombre = document.querySelector('.contenido h4');
+            const cardDescripcion = document.querySelector('.contenido .descripcion p');
+            const cardCiudad = document.querySelector('.contenido p strong');
+            const cardUbicacion = document.querySelector('.contenido p.mb-1.mt-3');
+            const cardImagen = document.querySelector('.imagen img');
+            
+            // Actualizar contenido
+            cardTitulo.textContent = servicio;
+            cardNombre.textContent = titulo;
+            cardDescripcion.textContent = descripcion;
+            vistaPrevia.style.display = "block";
+            formulario.style.display = "none";
+            cardUbicacion.innerHTML = `<strong>Ubicación:</strong> ${ciudad}`;
+            
+            // Mostrar imagen seleccionada
+            const file = imagenInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    cardImagen.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        </script>
+        
 </div>
 
 

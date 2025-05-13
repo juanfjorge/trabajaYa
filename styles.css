@@ -497,6 +497,10 @@ main h1, main h2, main h3, .categorias-grid {
 
 /*pagina panel trabajadores*/
 
+.panelTrabajo #crearSvc #vistaPrevia{
+
+  display: none;
+}
 @media (min-width: 426px) {
   .panelTrabajo .opcionesCel{
     display: none;
