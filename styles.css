@@ -366,7 +366,7 @@ a.card {
     flex-direction: column;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .bodyPlanes .planesCard {
     display: flex;
     align-items: center;
@@ -378,7 +378,25 @@ a.card {
     
     
   }
+  .panelTrabajo .opcionesPc{
+    display: none;
+
+  }
+  .panelTrabajo .opcionesCel{
+    display: flex;
+  }
 }/*# sourceMappingURL=styles.css.map */
+
+@media (min-width: 1025px) {
+
+  .panelTrabajo .opcionesPc{
+    display: flex;
+
+  }
+  .panelTrabajo .opcionesCel{
+    display: none;
+  }
+}
 
 .link{
   text-decoration: underline;
