@@ -14,28 +14,51 @@
     </head>
 </head>
 <body>
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
-        
-        <a class="navbar-brand" href="index.html">
-          <img src="./assets/img/logo-removebg-preview.png" alt="Logo" width="60" class="d-inline-block align-text-center">
-          TrabajaYa
-        </a>
-        
-        <a href="index.html" class="btn btn-secondary">Inicio</a>
-        
-        <div class="ms-auto d-flex">
-          <!-- Botón de Planes -->
-          <a href="./planes.html" class="btn btn-danger me-3">Planes</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/img/favicon4.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Inicio
+                </a>
+                
+                <form class="d-flex me-3 w-50" role="search">
+                    <input class="form-control me-2" type="search"
+                    placeholder="Escribe aquí la profesión que buscas o nombre del especialista" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
           
-          <a href="login.html" class="btn btn-light me-2">Entrar</a>
-          <a href="registro.html" class="btn btn-dark">Registrarse</a>
-        </div>
-        
-      </div>
-    </nav>
-  </header>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Electricista</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Gasista</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Albañiles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Metalúrgicos</a>
+                  </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="login.php" class="btn btn-outline-secondary me-2">Entrar</a>
+                    <a href="registro.html" class="btn btn-dark">Registrarse</a>
+                </div>
+          
+              </div>
+            </div>
+          </nav>
+          
+    </header>
 
     <div class="card-profesional d-flex border p-3 rounded">
         <div class="imagen me-3">
@@ -148,47 +171,61 @@
       </div>
 
 
-      <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h6>Redes Sociales</h6>
-            <div class="social-icons">
-              <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <footer class="footer bg-light text-dark py-4 border-top">
+        <div class="container">
+          <div class="row">
+      
+            
+            <div class="col-md-3 mb-3">
+              <img src="./assets/img/logo.jpg" alt="Logo" width="60" class="mb-2">
+              <div class="social-icons">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
-          </div>
-          <div class="footer-column">
-            <h6>Explorá categorías</h6>
-            <ul>
-              <li><a href="categorias.html?categoria=hogar">Hogar</a></li>
-              <li><a href="categorias.html?categoria=jardin">Jardín</a></li>
-              <li><a href="categorias.html?categoria=mascotas">Mascotas</a></li>
-              <li><a href="categorias.html?categoria=bienestar">Bienestar y estética</a></li>
-              <li><a href="categorias.html?categoria=cuidado">Cuidado personal y familia</a></li>
-              <li><a href="categorias.html?categoria=profesores">Profesores particulares</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h6>Enlaces Útiles</h6>
-            <ul>
-              <li><a href="#">Términos y Condiciones</a></li>
-              <li><a href="./planes.html">Conocé nuestros planes</a></li>
-              <li><a href="#">Ayuda</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h6>Contacto</h6>
-            <p>Email: contacto@trabajaya.com</p>
-            <p>Tel: +54 11 1234 5678</p>
+      
+           
+            <div class="col-md-3 mb-3">
+              <h6><strong>¿Brindás un servicio?</strong></h6>
+              <ul class="list-unstyled">
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="#">Loguearse</a></li>
+                <li><a href="#">Compartir con amigos</a></li>
+                <li><a href="#">Administrar Citas</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-3 mb-3">
+              <h6><strong>Explorar Oficios</strong></h6>
+              <ul class="list-unstyled">
+                <li><a href="#">Plomería</a></li>
+                <li><a href="#">Electricista</a></li>
+                <li><a href="#">Desarrollador Web</a></li>
+                <li><a href="#">Reparador de electrodomésticos</a></li>
+                <li><a href="#">Carpintería</a></li>
+                <li><a href="#">Metalúrgica</a></li>
+                <li><a href="#">Albañilería</a></li>
+              </ul>
+            </div>
+      
+        
+            <div class="col-md-3 mb-3">
+              <h6><strong>Necesitás Ayuda</strong></h6>
+              <ul class="list-unstyled">
+                <li><a href="#">Contactá con nosotros</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Protección de datos personales</a></li>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Defensa al consumidor</a></li>
+              </ul>
+            </div>
+      
           </div>
         </div>
-        <hr />
-        <div class="footer-bottom">
-          <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
-        </div>
-      </footer> 
+      </footer>
     
 </body>
 </html>
