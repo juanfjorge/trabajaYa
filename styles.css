@@ -382,7 +382,6 @@ a.card {
     display: none;
 
   }
-<<<<<<< HEAD
 }/*# sourceMappingURL=styles.css.map */
 
 
@@ -495,7 +494,6 @@ main h1, main h2, main h3, .categorias-grid {
 }
 
 
-
 /*pagina panel trabajadores*/
 
 .panelTrabajo #crearSvc #vistaPrevia{
@@ -508,6 +506,52 @@ main h1, main h2, main h3, .categorias-grid {
 
   }
 }
-=======
-}/*# sourceMappingURL=styles.css.map */
->>>>>>> parent of f37c6a5 (michotito)
+
+/*term y cond*/
+/* Título general y estructura */
+.texto {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Cada bloque de términos */
+.termino {
+  margin-bottom: 40px;
+}
+
+/* Títulos de secciones */
+.termino h5 {
+  font-weight: 600;
+  color: #b02a37;
+  margin-bottom: 10px;
+}
+
+/* Enlaces */
+.link {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Listas */
+.termino ul {
+  padding-left: 20px;
+}
+
+.termino ul li {
+  margin-bottom: 8px;
+}
+.terminos-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
