@@ -13,6 +13,13 @@
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS y Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <header class="sticky-top">
@@ -49,252 +56,222 @@
           </nav>
     </header>
 
-   <div class="preguntas">
-            <h2>Ayuda:</h2> 
-            <div class="accordion mt-2 mb-3" id="faqAccordion">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                      Servicios
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                      En nuestra plataforma vas a encontrar una amplia variedad de servicios organizados por categorías, para que puedas ubicar fácilmente al profesional que necesitás según tu necesidad:
-                      </p>
-                      <h6>Hogar:</h6>
-                      En esta categoria encontraras servicios para el manteninimiento y mejora del hogar:
-                      <ul>
-                      <li>Plomeros.</li>
-                      <li>Gasistas.</li>
-                      <li>Electricistas.</li>
-                      <li>Pintores.</li>
-                      <li>Limpiadoras Domesticas.</li>
-                      <li>Albañiles.</li>
-                      <li>Cocineros</li>
-                      </ul> 
-                      <h6>Jardín</h6>
-                      Servicio pensado para el cuidado de espacios verdes y piletas:
-                      <ul>
-                      <li>Jardineros.</li>
-                      <li>Pileteros.</li>
-                      </ul>
-
-                      <h6>Bienestar y Estética</h6>
-                      Profesionales que te ayudan a verte y sentirte bien: 
-                      <ul>
-                      <li>Peluqueros y Barberos.</li>
-                      <li>Manicuras y Pedicuras.</li>
-                      <li>Maquilladoras y Peinadoras.</li>
-                      </ul>
-                      
-                      <h6>Mascotas</h6>
-                      Servicios orientados al bienestar de tus animales:
-                      <ul>
-                      <li>Peluqueria canina.</li>
-                      <li>Entrenadores de perros.</li>
-                      <li>Paseadores de perros.</li>
-                      </ul>
-                      
-                      <h6>Cuidado personal y familia</h6>
-                      Pensado para quienes necesitan ayuda en el hogar con familiares:
-                      <ul>
-                      <li>Cuidadores de niños.</li>
-                      <li>Cuidadores de adultos mayores.</li>
-                      </ul>
-                      <h6>Profesores particulares</h6>
-                      Para quienes buscan apoyo académico personalizado en diferentes niveles:
-                      <ul>
-                      <li>Profesores de primaria.</li>
-                      <li>Profesores de secundaria. </li>
-                      <li>Profesores de universidad. </li> 
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                      ¿Cómo sé si puedo confiar en la persona que voy a contratar?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Cada prestador tiene un perfil con información personal, una foto y un certificado de buena conducta. Esto permite a los usuarios tomar decisiones más seguras a la hora de contratar un servicio.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                      ¿La plataforma interviene en los pagos entre usuarios?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      No, los acuerdos de pago y condiciones del servicio se definen entre el solicitante y el prestador. La plataforma solo facilita el contacto.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                      ¿Puedo contratar un servicio directamente desde la plataforma?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Podés contactar al prestador a través de su perfil para coordinar el servicio, pero los pagos y acuerdos se hacen por fuera de la plataforma.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                      ¿Qué pasa si tengo un problema con un prestador?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      La plataforma no interfiere en los acuerdos entre partes. Recomendamos documentar el acuerdo por escrito y comunicar cualquier problema directamente con la otra parte.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                      ¿Cómo me aseguro de que mi información personal esté protegida?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Tu privacidad es importante. Los datos personales que brindás al registrarte se usan solo para el funcionamiento de la plataforma, conforme a nuestra Política de Privacidad.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                      ¿Puedo modificar o eliminar mi cuenta?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Sí, desde tu perfil podés editar tu información, dar de baja tus publicaciones o eliminar tu cuenta si ya no deseás usar la plataforma.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                      ¿Qué hago si un prestador no cumple con lo acordado?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      La plataforma no media en conflictos, pero podés dejar una opinión en su perfil para advertir a otros usuarios. Siempre sugerimos que las condiciones queden claras antes de confirmar un servicio.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                      ¿Cómo encuentro el servicio que necesito?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Podés buscar por categoría (hogar, estética, mascotas, etc.) o usar el buscador para encontrar servicios específicos cerca de tu zona.
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                      ¿Puedo usar la plataforma desde el celular?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Sí, la página es 100% responsiva y funciona desde computadoras, tablets o celulares sin necesidad de descargar una app.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                      ¿La plataforma tiene un servicio de atención al cliente?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Sí, si tenés dudas o problemas, podés escribirnos a través del formulario de contacto o al correo que aparece en la sección “Contacto”.
-                    </div>
-                  </div>
-                </div>
-                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                      ¿Cómo sé si un servicio está disponible en mi zona?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Cada publicación incluye la ubicación del prestador. Asegurate de revisar eso antes de contactarlo, o filtrá la búsqueda por tu ciudad o barrio.
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="preguntas">
+      <h2>Ayuda:</h2> 
+      <div class="accordion mt-2 mb-3" id="faqAccordion">
+    
+        <!-- Acordeón 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+              ¿Qué es TrabajaYa?
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              TrabajaYa es una plataforma de contratación de servicios no convencionales donde los usuarios pueden contratar trabajadores en diversas categorías.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+              ¿Qué tipo de servicios puedo contratar?
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Puedes contratar una amplia gama de servicios, como jardinería, limpieza, gasistas, plomeros, y clases particulares, entre otros.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+              ¿Cómo puedo contratar un servicio?
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Para contratar un servicio, debes elegir la categoría, seleccionar al trabajador y confirmar los detalles del servicio.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+              ¿Cómo se realiza el pago?
+            </button>
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              El pago se realiza directamente al trabajador al finalizar el servicio.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+              ¿Puedo cancelar un servicio?
+            </button>
+          </h2>
+          <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, puedes cancelar tu reserva antes de que el servicio comience. Se te notificará si el trabajador ya está en camino.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+              ¿Qué pasa si el trabajador no llega?
+            </button>
+          </h2>
+          <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Si el trabajador no llega a tiempo, puedes calificarlo negativamente y solicitar un nuevo trabajador para el servicio.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+              ¿Cómo sé si puedo confiar en el trabajador?
+            </button>
+          </h2>
+          <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Cada trabajador tiene un perfil con valoraciones de clientes previos, y puedes ver su certificado de buena conducta.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+              ¿Dónde está disponible el servicio?
+            </button>
+          </h2>
+          <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              El servicio está disponible en varias zonas de la ciudad. Puedes filtrar por tu ubicación para encontrar los servicios más cercanos.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 9 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading9">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+              ¿Cómo puedo contactar con el trabajador?
+            </button>
+          </h2>
+          <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Una vez contratados, puedes comunicarte directamente con el trabajador a través de la plataforma.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 10 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading10">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+              ¿Cómo calificar al trabajador?
+            </button>
+          </h2>
+          <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Después de que el servicio se complete, puedes dejar una calificación basada en tu experiencia con el trabajador.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 11 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading11">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+              ¿Puedo agregar un trabajador a la plataforma?
+            </button>
+          </h2>
+          <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, puedes registrarte como trabajador si cumples con los requisitos y verificas tu identidad.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Acordeón 12 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading12">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+              ¿Qué hacer si tengo un problema con el servicio?
+            </button>
+          </h2>
+          <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Si tienes un problema con el servicio, puedes comunicarte con nuestro soporte al cliente y resolverlo rápidamente.
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    
         
     <footer class="footer">
-          <div class="footer-content">
-            <div class="footer-column">
-              <h6>Redes Sociales</h6>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-            <div class="footer-column">
-              <h6>Explorá categorías</h6>
-              <ul>
-                <li><a href="#">Hogar</a></li>
-                <li><a href="#">Jardín</a></li>
-                <li><a href="#">Mascotas</a></li>
-                <li><a href="#">Bienestar y estética</a></li>
-                <li><a href="#">Cuidado personal y familia</a></li>
-                <li><a href="#">Profesores particulares</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h6>Enlaces Útiles</h6>
-              <ul>
-                <li><a href="term-con.html">Términos y Condiciones</a></li>
-                <li><a href="#">Conocé nuestros planes</a></li>
-                <li><a href="preguntas.html">Ayuda</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h6>Contacto</h6>
-              <p>Email: contacto@trabajaya.com</p>
-              <p>Tel: +54 11 1234 5678</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h6>Redes Sociales</h6>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </div>
-          <hr />
-          <div class="footer-bottom">
-            <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
-          </div>
-        </footer> 
+        </div>
+        <div class="footer-column">
+          <h6>Explorá categorías</h6>
+          <ul>
+            <li><a href="categorias.html?categoria=hogar">Hogar</a></li>
+            <li><a href="categorias.html?categoria=jardin">Jardín</a></li>
+            <li><a href="categorias.html?categoria=mascotas">Mascotas</a></li>
+            <li><a href="categorias.html?categoria=bienestar">Bienestar y estética</a></li>
+            <li><a href="categorias.html?categoria=cuidado">Cuidado personal y familia</a></li>
+            <li><a href="categorias.html?categoria=profesores">Profesores particulares</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Enlaces Útiles</h6>
+          <ul>
+            <li><a href="./terminos-condiciones.html">Términos y Condiciones</a></li>
+            <li><a href="./planes.html">Conocé nuestros planes</a></li>
+            <li><a href="./preguntas.html">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Contacto</h6>
+          <p>Email: contacto@trabajaya.com</p>
+          <p>Tel: +54 11 1234 5678</p>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
+      </div>
+    </footer> 
 </body>
 </html>

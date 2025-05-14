@@ -382,6 +382,10 @@ a.card {
     display: none;
 
   }
+  .panelTrabajo .opcionesPc{
+    display: none;
+
+  }
   .panelTrabajo .opcionesCel{
     display: flex;
   }
@@ -398,15 +402,239 @@ a.card {
   }
 }
 
-.link{
-  text-decoration: underline;
+
+/* Contenedor general */
+#categoriasServicios {
+  padding: 3rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
 }
-.termino{
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
+
+/* Botones de categoría */
+.btn-categoria {
+  margin: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: 2px solid #dc3545; /* rojo */
+  background-color: white;
+  color: #dc3545;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-  .panelTrabajo .opcionesPc{
+
+.btn-categoria:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Grid de servicios */
+#serviciosGrid {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Botones de servicio */
+.btn-servicio {
+  padding: 0.6rem 1rem;
+  background-color: #b02a37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-servicio:hover {
+  background-color: #dc3545;
+  transform: scale(1.05);
+}
+
+/* Tarjetas de trabajadores */
+#tarjetas {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.tarjeta p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+main {
+  padding-top: 2rem; /* espacio para compensar la navbar sticky */
+  padding-bottom: 3rem; /* espacio para evitar que se pegue al footer */
+}
+
+/* Estilo para los títulos principales */
+main h1, main h2, main h3, .categorias-grid {
+  margin-top:3px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+
+/*pagina panel trabajadores*/
+
+.panelTrabajo #crearSvc #vistaPrevia{
+
+  display: none;
+}
+@media (min-width: 426px) {
+  .panelTrabajo .opcionesCel{
     display: none;
 
   }
+}
+
+/*term y cond*/
+/* Título general y estructura */
+.texto {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Cada bloque de términos */
+.termino {
+  margin-bottom: 40px;
+}
+
+/* Títulos de secciones */
+.termino h5 {
+  font-weight: 600;
+  color: #b02a37;
+  margin-bottom: 10px;
+}
+
+/* Enlaces */
+.link {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Listas */
+.termino ul {
+  padding-left: 20px;
+}
+
+.termino ul li {
+  margin-bottom: 8px;
+}
+.terminos-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Preg*/
+/* Estilos generales para el acordeón */
+.preguntas .accordion-button {
+  background-color: #f7f7f7;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.preguntas .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Cambio de color cuando el acordeón está abierto */
+.preguntas .accordion-button:not(.collapsed) {
+  background-color: #e1e1e1;
+  color: #000;
+}
+
+/* Estilos para el cuerpo del acordeón */
+.preguntas .accordion-body {
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos para las preguntas */
+.preguntas .accordion-header {
+  margin-bottom: 10px;
+}
+
+/* Espaciado y márgenes solo para las preguntas dentro de .preguntas */
+.preguntas {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.preguntas h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajustes para mejorar la legibilidad de las preguntas y respuestas dentro de .preguntas */
+.preguntas .accordion-item {
+  margin-bottom: 10px;
+}
+
+/* Sombra sutil alrededor del acordeón dentro de .preguntas */
+.preguntas .accordion-item {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+/* Cambiar el borde azul a rojo cuando el acordeón está expandido */
+.accordion-button:not(.collapsed):focus {
+  border-color: #b02a37; /* Rojo */
+}
+
+/* Cambiar el borde azul a rojo cuando el acordeón está cerrado pero seleccionado */
+.accordion-button.collapsed:focus {
+  border-color: #b02a37; /* Rojo */
+}
