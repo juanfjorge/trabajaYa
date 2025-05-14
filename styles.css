@@ -555,3 +555,68 @@ main h1, main h2, main h3, .categorias-grid {
   font-family: 'Poppins', sans-serif;
 }
 
+/*Preg*/
+/* Estilos generales para el acordeón */
+.preguntas .accordion-button {
+  background-color: #f7f7f7;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.preguntas .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Cambio de color cuando el acordeón está abierto */
+.preguntas .accordion-button:not(.collapsed) {
+  background-color: #e1e1e1;
+  color: #000;
+}
+
+/* Estilos para el cuerpo del acordeón */
+.preguntas .accordion-body {
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos para las preguntas */
+.preguntas .accordion-header {
+  margin-bottom: 10px;
+}
+
+/* Espaciado y márgenes solo para las preguntas dentro de .preguntas */
+.preguntas {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.preguntas h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajustes para mejorar la legibilidad de las preguntas y respuestas dentro de .preguntas */
+.preguntas .accordion-item {
+  margin-bottom: 10px;
+}
+
+/* Sombra sutil alrededor del acordeón dentro de .preguntas */
+.preguntas .accordion-item {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+/* Cambiar el borde azul a rojo cuando el acordeón está expandido */
+.accordion-button:not(.collapsed):focus {
+  border-color: #b02a37; /* Rojo */
+}
+
+/* Cambiar el borde azul a rojo cuando el acordeón está cerrado pero seleccionado */
+.accordion-button.collapsed:focus {
+  border-color: #b02a37; /* Rojo */
+}
