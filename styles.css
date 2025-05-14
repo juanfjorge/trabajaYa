@@ -378,18 +378,132 @@ a.card {
     
     
   }
-}/*# sourceMappingURL=styles.css.map */
-
-.link{
-  text-decoration: underline;
-}
-.termino{
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
-}
   .panelTrabajo .opcionesPc{
     display: none;
 
   }
 }/*# sourceMappingURL=styles.css.map */
+
+
+/* Contenedor general */
+#categoriasServicios {
+  padding: 3rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* Botones de categoría */
+.btn-categoria {
+  margin: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: 2px solid #dc3545; /* rojo */
+  background-color: white;
+  color: #dc3545;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-categoria:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Grid de servicios */
+#serviciosGrid {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Botones de servicio */
+.btn-servicio {
+  padding: 0.6rem 1rem;
+  background-color: #b02a37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-servicio:hover {
+  background-color: #dc3545;
+  transform: scale(1.05);
+}
+
+/* Tarjetas de trabajadores */
+#tarjetas {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.tarjeta p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+main {
+  padding-top: 2rem; /* espacio para compensar la navbar sticky */
+  padding-bottom: 3rem; /* espacio para evitar que se pegue al footer */
+}
+
+/* Estilo para los títulos principales */
+main h1, main h2, main h3, .categorias-grid {
+  margin-top:3px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+
+
+/*pagina panel trabajadores*/
+
+.panelTrabajo #crearSvc #vistaPrevia{
+
+  display: none;
+}
+@media (min-width: 426px) {
+  .panelTrabajo .opcionesCel{
+    display: none;
+
+  }
+}
