@@ -377,3 +377,12 @@ a.card {
     flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=styles.css.map */
+
+.link{
+  text-decoration: underline;
+}
+.termino{
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
