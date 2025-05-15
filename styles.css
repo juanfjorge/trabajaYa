@@ -358,6 +358,16 @@ a.card {
   color: black;
   border: 1.5px solid #5a5a5a;
 }
+.cardBasico, .cardPremium {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cardBasico:hover, .cardPremium:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
 
 @media (max-width: 425px) {
   .bodyPlanes .loginPage {
