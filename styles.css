@@ -366,7 +366,7 @@ a.card {
     flex-direction: column;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 425px) {
   .bodyPlanes .planesCard {
     display: flex;
     align-items: center;
@@ -382,25 +382,7 @@ a.card {
     display: none;
 
   }
-  .panelTrabajo .opcionesPc{
-    display: none;
-
-  }
-  .panelTrabajo .opcionesCel{
-    display: flex;
-  }
 }/*# sourceMappingURL=styles.css.map */
-
-@media (min-width: 1025px) {
-
-  .panelTrabajo .opcionesPc{
-    display: flex;
-
-  }
-  .panelTrabajo .opcionesCel{
-    display: none;
-  }
-}
 
 
 /* Contenedor general */
@@ -516,6 +498,96 @@ main h1, main h2, main h3, .categorias-grid {
 
 .panelTrabajo #crearSvc #vistaPrevia{
 
+  display: none;
+
+
+}
+.panelTrabajo #msjs{
+
+  display: none;
+  grid-template-columns: 30% auto;
+  justify-items: start;
+  
+}
+
+
+.panelTrabajo #msjs .mensajesRecibidos .contacto{
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.panelTrabajo #msjs .mensajesRecibidos .contacto .infoContacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.panelTrabajo #msjs .mensajesRecibidos .contacto .img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+}
+.panelTrabajo #msjs .mensajesRecibidos .contacto:hover{
+  background-color: #e5ddd5;
+
+}
+.panelTrabajo #msjs .chat{
+  
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+    background-color: #fff;
+  
+  
+}
+.panelTrabajo #msjs .chat .nombreEmpleado {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.panelTrabajo #msjs .chat .mensajeRecibido {
+  justify-self: start;
+  background-color: #f1f0f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 60%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+.panelTrabajo #msjs .chat .mensajeEnviado {
+  justify-self: end;
+  background-color: #757575;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 60%;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.panelTrabajo #msjs .chat .interaccion{
+
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 10px;
+    overflow-y: auto;
+  
+  
+}
+
+.panelTrabajo #administarServicios{
+  display: none;
+}
+.panelTrabajo #resenias{
   display: none;
 }
 @media (min-width: 426px) {

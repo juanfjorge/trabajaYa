@@ -84,25 +84,23 @@
                   <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Opciones</h5>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                      <!-- segun plan -->
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Crear Nuevo servicio</a>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mensajes</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Administrar Publicacion de Servicio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Reseñas recibidas</a>
-                    </li>
-                    
-                  </ul>
-                  
-                </div>
+                
+        <div class="btn-group btn-group-vertical w-100 mt-3" role="group" aria-label="Basic radio toggle button group">
+            
+            <!-- dependiendo del plan  -->
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-danger" for="btnradio1">Crear nuevo servicio</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio2">Mensajes</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio3">Administrar publicacion de servicio</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio4">Reseñas recibidas</label>
+        
+        </div>
               </div>
             </div>
         </nav>
@@ -111,7 +109,6 @@
 
     <section id="crearSvc">
         <hr>
-        
         
         <div class="formulario">
             <form class="row g-3">
@@ -181,54 +178,176 @@
             <button type="button" class="btn btn-warning"><-Volver</button>
             <button type="button" class="btn btn-success">Siguiente -></button>
         </div>
-    </section>
+        
+        </section>
 
-    <script>
+        <section id="msjs">
+                <ul class="mensajesRecibidos">
+                    <li class="contacto">
+                        <img src="./assets/img/persona2Ejemplo.jpg" alt=""  class="img">
+                        <div class="infoContacto">
+                            <b><h4>Javo Milner</h4></b>
+                            <b><p>Hola! Que dia podemos coordinar?</p></b>
+                        </div>
+                        <button type="button" class="btn btn-danger rounded-circle ms-5">1</button>
+                        
+                    </li>
+                    
+                    <li class="contacto">
+                        
+                            <img src="./assets/img/personaEjemplo.jpg" alt="" class="img">
+                            <div class="infoContacto">
+                                <b><h4>Maria Diaz</h4></b>
+                                <b><p>Hola? tengo el baño roto :(</p></b>
+                            </div>
+                            <button type="button" class="btn btn-danger rounded-circle ms-5 ">1</button>
+                    </li>
+                    
+                    <li class="contacto">
+                        <img src="./assets/img/personaEjemplo.jpg" alt=""  class="img">
+                        <div class="infoContacto">
+                            <h4>Nahuel Munian</h4>
+                            <b><p>Hola! Recibis transferencia?</p></b>
+                        </div>
+                        <button type="button" class="btn btn-danger rounded-circle ms-5 ">1</button>
+                    </li>
+                    
+                    <li  class="contacto">
+                        <img src="./assets/img/personaEjemplo.jpg" alt="" class="img">
+                        <div class="infoContacto">
+                            <h4>Maria Diaz</h4>
+                            <p>Hola? tengo el baño roto :(</p>
+                        </div>
+                        
 
-        document.querySelector('.btn-warning').addEventListener('click', function () {
-            const vistaPrevia =document.getElementById('vistaPrevia');
-            const formulario = document.getElementsByClassName('formulario')[0];
+                    </li>
+                    
+                </ul>
+                <div class="chat">
+                    <h2 class="nombreEmpleado">Maria Diaz</h2>
+                    <div class="interaccion">
+                       
+                            <p class="mensajeRecibido">Hola! Tengo el baño roto</p>
+                            <p class="mensajeEnviado">Si! mañana puedo ir a verlo!</p>
+                    
+                    </div>
+                    <footer>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Escribe un mensaje" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
+                          </div>
+                    </footer>
+                </div>
 
-            vistaPrevia.style.display = "none";
-            formulario.style.display = "block";
-        });
-        document.querySelector('.btn-success').addEventListener('click', function () {
-            // Obtener valores del formulario
-            const titulo = document.getElementById('inputAddress2').value;
-            const ciudad = document.getElementById('inputCity').value;
-            const descripcion = document.getElementById('exampleFormControlTextarea1').value;
-            const servicio = document.getElementById('inputState').value;
-            const imagenInput = document.getElementById('formFileSm');
-            const vistaPrevia =document.getElementById('vistaPrevia');
-            const formulario = document.getElementsByClassName('formulario')[0];
 
-            // Seleccionar elementos de vista previa
-            const cardTitulo = document.querySelector('.contenido h6');
-            const cardNombre = document.querySelector('.contenido h4');
-            const cardDescripcion = document.querySelector('.contenido .descripcion p');
-            const cardCiudad = document.querySelector('.contenido p strong');
-            const cardUbicacion = document.querySelector('.contenido p.mb-1.mt-3');
-            const cardImagen = document.querySelector('.imagen img');
-            
-            // Actualizar contenido
-            cardTitulo.textContent = servicio;
-            cardNombre.textContent = titulo;
-            cardDescripcion.textContent = descripcion;
-            vistaPrevia.style.display = "block";
-            formulario.style.display = "none";
-            cardUbicacion.innerHTML = `<strong>Ubicación:</strong> ${ciudad}`;
-            
-            // Mostrar imagen seleccionada
-            const file = imagenInput.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    cardImagen.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-        </script>
+        </section>
+
+        <section id="administarServicios">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Hogar</b></td>
+                        <td>Soy Francisco, Electricista matriculado con más de 15 años de experiencia en trabajos especializados
+
+                            🔧 Reparación de fugas y pérdidas de gas
+                            🛠 Instalación de cocinas y calefones
+                            💧 Mantenimiento de termotanques
+                            🚨 Atención de urgencias 24/7</td>
+                        <td>
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./assets/img/3.-pintor-de-casas.webp" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./assets/img/trabajo.jpeg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </td>
+                        <td>
+                            
+                            <button type="button" class="btn btn-warning">Editar</button>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </section>
+
+        <section id="resenias">
+            <h2>Ultimas Reseñas Recibidas por tus trabajos:</h2>
+            <div class="row row-cols-2 row-cols-md-3 g-2">
+                <div class="col">
+                  <div class="card p-3 h-100">
+                    <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
+                    <h5 class="card-title">Educado.</h5>
+                    <p class="mb-1">Muy puntual a la hora de acordar reuniones.</p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img src="https://i.pravatar.cc/30?u=1" class="rounded-circle me-2" width="30" height="30" alt="user">
+                      <div>
+                        <strong>Angeles</strong><br>
+                        <small class="text-muted">15/01/2025</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col">
+                  <div class="card p-3 h-100">
+                    <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
+                    <h5 class="card-title">Totalmente recomendable.</h5>
+                    <p class="mb-1">Francisco un genio trabajando muy prolijo.</p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img src="https://i.pravatar.cc/30?u=2" class="rounded-circle me-2" width="30" height="30" alt="user">
+                      <div>
+                        <strong>María García</strong><br>
+                        <small class="text-muted">28/02/2025</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col">
+                  <div class="card p-3 h-100">
+                    <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
+                    <h5 class="card-title">Inteligente.</h5>
+                    <p class="mb-1">Muy eficaz a la hora de resolver problemas.</p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img src="https://i.pravatar.cc/30?u=3" class="rounded-circle me-2" width="30" height="30" alt="user">
+                      <div>
+                        <strong>Jose Luis</strong><br>
+                        <small class="text-muted">26/01/2025</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              
+
+        </section>
+
+
         
 </div>
 
@@ -276,6 +395,7 @@
 </footer> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/scriptsPanelTrabajadores.js"></script>
 
 </body>
 </html>
