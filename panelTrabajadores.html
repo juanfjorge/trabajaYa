@@ -47,6 +47,7 @@
         </div>
     </nav>
 </header>
+<main class="mt-0 contenido-principal">
 
 <h3 class="tituloPanel">Bienvenido -nombre del trabajador-</h3>
 <div class="panelTrabajo">
@@ -128,19 +129,52 @@
                     </div>
                     
                     
-                    <div class="col-md-6">
-                      <label for="inputState" class="form-label">Seleccione su categoria</label>
-                      <select id="inputState" class="form-select">
-                        <option selected>Elegir</option>
-                        <option>Hogar</option>
-                        <option>Educacion</option>
-                        <option>Jardin</option>
-                        <option>Mascotas</option>
-                        <option>Bienestar y estetica</option>
-                        <option>Cuidado personal y familiar</option>
-                        <option>Profesor particular</option>
-                        <option>Otro</option>
-                      </select>
+                    <div class="container mt-4">
+                      <label for="categoria">Categoría:</label>
+        <select id="categoria" onchange="cargarServicios()">
+          <option value="">Seleccioná una categoría</option>
+          <option value="hogar">Hogar</option>
+          <option value="jardin">Jardín</option>
+          <option value="mascotas">Mascotas</option>
+          <option value="bienestar">Bienestar y estética</option>
+          <option value="cuidado">Cuidado personal</option>
+          <option value="profesores">Profesor particular</option>
+        </select>
+        
+        <label for="servicio">Servicio:</label>
+        <select id="servicio">
+          <option value="">Seleccioná un servicio</option>
+        </select>
+        
+        <script>
+          const serviciosPorCategoria = {
+            hogar: ["Electricista", "Plomero", "Gasista", "Limpiador doméstico", "Pintor", "Albañil", "Cocinero particular"],
+            jardin: ["Jardinero", "Limpiador de piletas"],
+            mascotas:["Peluquería canina","Entrenador de perros","Paseador de perros"],
+            bienestar:["Peluquería-Barbería","Manicura-Pedicura","Maquilladora-Peinadora"],
+            cuidado:["Cuidado de niños", "Cuidado de adultos mayores"],
+            profesores:["Prof. de Primaria","Prof. de Secundaria", "Prof. Universitarios"]
+          };
+        
+          function cargarServicios() {
+            const categoria = document.getElementById("categoria").value;
+            const servicioSelect = document.getElementById("servicio");
+        
+            // Limpiar servicios anteriores
+            servicioSelect.innerHTML = '<option value="">Seleccioná un servicio</option>';
+        
+            // Si hay servicios, cargarlos
+            if (categoria && serviciosPorCategoria[categoria]) {
+              serviciosPorCategoria[categoria].forEach(servicio => {
+                const option = document.createElement("option");
+                option.value = servicio.toLowerCase();
+                option.textContent = servicio;
+                servicioSelect.appendChild(option);
+              });
+            }
+          }
+        </script>
+        
                     </div>
                     <div class="col-md-5 mb-2">
                         <label for="formFileSm" class="form-label">Cargar Fotos de sus trabajos </label>
@@ -351,48 +385,48 @@
         
 </div>
 
-
+    </main>
 <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h6>Redes Sociales</h6>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h6>Explorá categorías</h6>
-        <ul>
-          <li><a href="#">Hogar</a></li>
-          <li><a href="#">Jardín</a></li>
-          <li><a href="#">Mascotas</a></li>
-          <li><a href="#">Bienestar y estética</a></li>
-          <li><a href="#">Cuidado personal y familia</a></li>
-          <li><a href="#">Profesores particulares</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h6>Enlaces Útiles</h6>
-        <ul>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Conocé nuestros plaanes</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h6>Contacto</h6>
-        <p>Email: contacto@trabajaya.com</p>
-        <p>Tel: +54 11 1234 5678</p>
-      </div>
-    </div>
-    <hr />
-    <div class="footer-bottom">
-      <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
-    </div>
-</footer> 
+          <div class="footer-content">
+            <div class="footer-column">
+              <h6>Redes Sociales</h6>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="footer-column">
+              <h6>Explorá categorías</h6>
+              <ul>
+                <li><a href="categorias.html?categoria=hogar">Hogar</a></li>
+                <li><a href="categorias.html?categoria=jardin">Jardín</a></li>
+                <li><a href="categorias.html?categoria=mascotas">Mascotas</a></li>
+                <li><a href="categorias.html?categoria=bienestar">Bienestar y estética</a></li>
+                <li><a href="categorias.html?categoria=cuidado">Cuidado personal y familia</a></li>
+                <li><a href="categorias.html?categoria=profesores">Profesores particulares</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h6>Enlaces Útiles</h6>
+              <ul>
+                <li><a href="./terminos-condiciones.html">Términos y Condiciones</a></li>
+                <li><a href="./planes.html">Conocé nuestros planes</a></li>
+                <li><a href="./preguntas.html">Ayuda</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h6>Contacto</h6>
+              <p>Email: contacto@trabajaya.com</p>
+              <p>Tel: +54 11 1234 5678</p>
+            </div>
+          </div>
+          <hr />
+          <div class="footer-bottom">
+            <p>&copy; 2025 TrabajaYa. Todos los derechos reservados.</p>
+          </div>
+        </footer> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 <script src="./scripts/scriptsPanelTrabajadores.js"></script>

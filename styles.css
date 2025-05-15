@@ -10,6 +10,11 @@ body {
   background-color: #f5f3ef;
 }
 
+.contenido-principal {
+  margin: 40px
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
@@ -353,6 +358,7 @@ a.card {
   color: black;
   border: 1.5px solid #5a5a5a;
 }
+
 @media (max-width: 425px) {
   .bodyPlanes .loginPage {
     display: flex;
@@ -710,3 +716,5 @@ main h1, main h2, main h3, .categorias-grid {
 .accordion-button.collapsed:focus {
   border-color: #b02a37; /* Rojo */
 }
+
+
