@@ -1,4 +1,3 @@
-<script src="script.js" defer></script>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -84,7 +83,7 @@
               </select>
           </div>
       </div>
-      <button type="button" class="btn btn-danger mt-3">Aplicar filtros</button>
+      <button id="btnAplicarFiltros" type="button" class="btn btn-danger mt-3">Aplicar filtros</button>
     </div>
                         <!--Tarjetas de trabajadores-->
                         <section class="trabajadores">
@@ -96,7 +95,7 @@
                                   <!-- Tarjeta 1 -->
                                   <div class="col-12 col-md-4 mb-4">
                                     <a href="trabajador.html">
-                                      <div class="card" style="width: 20rem;">
+                                      <div class="card" style="width: 20rem" data-zona="ciudad" data-categoria="hogar">
                                         <img src="./assets/img/personaEjemplo.jpg" class="card-img-top" alt="imgTrabajador">
                                         <div class="card-body">
                                           <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
@@ -112,7 +111,7 @@
                                   <!-- Tarjeta 2 -->
                                   <div class="col-12 col-md-4 mb-4">
                                     <a href="trabajador1.html">
-                                    <div class="card" style="width: 20rem;">
+                                    <div class="card" style="width: 20rem" data-zona="lujan" data-categoria="hogar">
                                       <img src="/assets/img/trabajador1.jpg" class="card-img-top" alt="imgTrabajador">
                                       <div class="card-body">
                                         <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
@@ -128,7 +127,7 @@
                                   <!-- Tarjeta 3 -->
                                   <div class="col-12 col-md-4 mb-4">
                                     <a href="trabajador2.html">
-                                    <div class="card" style="width: 20rem;">
+                                    <div class="card" style="width: 20rem" data-zona="lujan" data-categoria="hogar">
                                       <span class="badge bg-success text-dark position-absolute top-0 start-0 m-2">★ Recomendado</span>
                                       <img src="/assets/img/trabajador2.jpg" class="card-img-top" alt="imgTrabajador">
                                       <div class="card-body">
@@ -150,13 +149,13 @@
                                   <!-- Tarjeta 4 -->
                                   <div class="col-12 col-md-4 mb-4">
                                     <a href="trabajador3.html">
-                                    <div class="card" style="width: 20rem;">
+                                    <div class="card" style="width: 20rem" data-zona="ciudad" data-categoria="hogar">
                                       <img src="/assets/img/trbajador.jpg" class="card-img-top" alt="imgTrabajador">
                                       <div class="card-body">
                                         <h3 class="card-title">Franco Ramos</h3>
                                         <p class="card-text">Categoria: <b>Hogar</b></p>
                                         <p class="card-text">Servicio: <b>Carpintero</b></p>
-                                        <p class="card-text">Zona: <b>La Plata, Buenos Aires</b></p>
+                                        <p class="card-text">Zona: <b>Ciudad, Mendoza</b></p>
                                         <p class="card-text">Profesional dedicado a la creación, reparación e instalación de elementos de madera para interiores y exteriores.</p>
                                       </div>
                                     </div>
@@ -165,7 +164,7 @@
                                   <!-- Tarjeta 5 -->
                                   <div class="col-12 col-md-4 mb-4">
                                     <a href="trabajador4.html">
-                                    <div class="card" style="width: 20rem;">
+                                    <div class="card" style="width: 20rem" data-zona="maipu" data-categoria="hogar">
                                       <img src="/assets/img/trabajador3.jpg" class="card-img-top" alt="imgTrabajador">
                                       <div class="card-body">
                                         <h3 class="card-title">Marcela Palacios</h3>
@@ -180,7 +179,7 @@
                                   <!-- Tarjeta 6 -->
                                   <div class="col-12 col-md-4 mb-4">
                                      <a href="trabajador5.html">
-                                    <div class="card" style="width: 20rem;">
+                                    <div class="card" style="width: 20rem" data-zona="maipu" data-categoria="hogar">
                                       <img src="/assets/img/trabajadorPintor.jpg" class="card-img-top" alt="imgTrabajador">
                                       <div class="card-body">
                                         <h3 class="card-title">Eduardo Morales</h3>
@@ -251,7 +250,7 @@
           </div>
         </footer> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   function buscar() {
     const query = document.getElementById('barraBusqueda').value.trim().toLowerCase();
@@ -276,7 +275,29 @@
   });
 </script>
 
-
+<script>
+  document.getElementById("btnAplicarFiltros").addEventListener("click", function () {
+      const zonaSeleccionada = document.getElementById("zona").value;
+      const categoriaSeleccionada = document.getElementById("servicio").value;
+  
+      const tarjetas = document.querySelectorAll(".card");
+  
+      tarjetas.forEach((tarjeta) => {
+          const zona = tarjeta.getAttribute("data-zona");
+          const categoria = tarjeta.getAttribute("data-categoria");
+  
+          const coincideZona = zonaSeleccionada === "todas" || zona === zonaSeleccionada;
+          const coincideCategoria = categoriaSeleccionada === "todos" || categoria === categoriaSeleccionada;
+  
+          if (coincideZona && coincideCategoria) {
+              tarjeta.closest(".col-12").style.display = "block"; // Mostrar la tarjeta
+          } else {
+              tarjeta.closest(".col-12").style.display = "none"; // Ocultarla
+          }
+      });
+  });
+  </script>
+  
 
 </body>
 </html>
