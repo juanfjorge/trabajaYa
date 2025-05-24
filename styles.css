@@ -728,3 +728,59 @@ main h1, main h2, main h3, .categorias-grid {
 }
 
 
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .imagen-principal {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .eslogan {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .titulo-categoria {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .filtros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+}
