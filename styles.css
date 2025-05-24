@@ -376,9 +376,6 @@ a.card {
     height: auto;
     flex-direction: column-reverse;
   }
-<<<<<<< HEAD
-}/*# sourceMappingURL=styles.css.map */
-=======
   .panelTrabajo .opcionesPc{
     display: none;
 
@@ -769,4 +766,3 @@ main h1, main h2, main h3, .categorias-grid {
     padding: 10px;
   }
 }
->>>>>>> main
