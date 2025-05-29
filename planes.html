@@ -70,7 +70,8 @@
                       <h5 class="card-title"><b>Plan Premium</b></h5>
                       <h2 class="card-subtitle pMes"><b>$2000</b></h2>
                       <h2 class="card-subtitle pAnio" style="display: none;"><b>$24000</b></h2>
-                      <ul class="card-text">
+                      <h2 class="card-subtitle"><b>ó</b></h2>
+                      <div id="resultado1" class="mt-3 fw-bold"></div> <ul class="card-text">
                         <li class="card-text">Accesos a estadisticas de visitas y rendimientos</li>
                         <li class="card-text">Hasta dos publicaciones de servicios</li>
                         <li class="card-text">Perfil Profesional visible en TrabajaYa</li>
@@ -89,15 +90,16 @@
                       <h5 class="card-title"><b>Plan Red</b></h5>
                       <h2 class="card-subtitle pMesD"><b>$5000</b></h2>
                       <h2 class="card-subtitle pAnioD" style="display: none;"><b>$60000</b></h2>
-                      <ul class="card-text">
+                      <h2 class="card-subtitle"><b>ó</b></h2>
+                      <div id="resultado2" class="mt-3 fw-bold"></div> <ul class="card-text">
                             <li class="card-text">Perfil Profesional visible en TrabajaYa</li>
                             <li class="card-text">Publicaciones de servicios ilimitadas</li>
                             <li class="card-text">Posibilidad de ver las opiniones de los usuarios</li>
                             <li class="card-text">Prioridad en las busquedas</li>
                             <li class="card-text">Sello de Recomendado</li>
                             <li class="card-text">Accesos a estadisticas de visitas y rendimientos</li>
-                      </ul>
-                      <a href="registro.html" class="btn btn-secondary  btn-lg mx-auto px-5">Registrarse</a>
+                          </ul>
+                          <a href="registro.html" class="btn btn-secondary  btn-lg mx-auto px-5">Registrarse</a>
                     </div>
                   </div>
                 </div>
@@ -206,25 +208,104 @@
           document.addEventListener('DOMContentLoaded', function() {
             const btnanio = document.getElementsByClassName("btn-anio")[0];
             const btnMes = document.getElementsByClassName("btn-mes")[0];
-            const precioMes = document.getElementsByClassName("pMes")[0];
-            const precioMes1 = document.getElementsByClassName("pMesD")[0];
-            const precioAnio = document.getElementsByClassName("pAnio")[0];
-            const precioAnio1 = document.getElementsByClassName("pAnioD")[0];
-        
+            
+            // Referencias a los elementos de precio de cada plan
+            const precioPremiumMes = document.querySelector(".cardBasico .pMes");
+            const precioPremiumAnio = document.querySelector(".cardBasico .pAnio");
+            const resultadoPremium = document.getElementById('resultado1');
+
+            const precioRedMes = document.querySelector(".cardPremium .pMesD");
+            const precioRedAnio = document.querySelector(".cardPremium .pAnioD");
+            const resultadoRed = document.getElementById('resultado2');
+
+            const criptoSeleccionada = 'bitcoin';
+            const criptoNombre = 'Bitcoin (BTC)';
+
+            async function convertir(precioMesElement, precioAnioElement, resultadoElement) {
+              let cantidadARS_element;
+
+              // Determina qué precio está visible para el plan actual
+              if (precioMesElement.style.display !== 'none') {
+                cantidadARS_element = precioMesElement;
+              } else if (precioAnioElement.style.display !== 'none') {
+                cantidadARS_element = precioAnioElement;
+              } else {
+                resultadoElement.textContent = ""; // Limpiar si no se encuentra un precio
+                return;
+              }
+
+              const cantidadARS_raw = cantidadARS_element.textContent;
+              
+              // Si el texto es "Gratis", no intentar convertir
+              if (cantidadARS_raw.trim().toLowerCase() === 'gratis') {
+                  resultadoElement.textContent = "Gratis"; // O dejarlo vacío, según la preferencia
+                  return;
+              }
+
+              // Remueve el símbolo de peso y convierte a número
+              const cantidadARS = parseFloat(cantidadARS_raw.replace('$', ''));
+             
+              if (isNaN(cantidadARS) || cantidadARS <= 0) {
+                  resultadoElement.textContent = "Error de precio"; // Mensaje de error más específico
+                  console.error("Cantidad ARS no válida:", cantidadARS_raw);
+                  return;
+              }
+
+              try {
+                const url = `https://api.coingecko.com/api/v3/simple/price?ids=${criptoSeleccionada}&vs_currencies=ars`;
+                const res = await fetch(url);
+                
+                if (!res.ok) {
+                    throw new Error(`Error de API: ${res.status} ${res.statusText}`);
+                }
+                
+                const data = await res.json();
+
+                if (!data[criptoSeleccionada] || !data[criptoSeleccionada].ars) {
+                    throw new Error("Datos de cotización incompletos de la API.");
+                }
+
+                const precioEnARS = data[criptoSeleccionada].ars;
+                const cantidadCripto = cantidadARS / precioEnARS;
+                
+                resultadoElement.innerHTML = `<p> ${cantidadCripto.toFixed(8)} ${criptoNombre} </p>`;
+              } catch (error) {
+                resultadoElement.textContent = "Error al obtener cotización.";
+                console.error("Error en la conversión:", error);
+              }
+            }
+
+            // Llama a convertir para cada plan al cargar la página
+            convertir(precioPremiumMes, precioPremiumAnio, resultadoPremium);
+            convertir(precioRedMes, precioRedAnio, resultadoRed);
+            
             btnanio.addEventListener("click", function (e) {
-              precioMes.style.display = 'none';
-              precioMes1.style.display = 'none';
-              precioAnio.style.display = 'block';
-              precioAnio1.style.display = 'block';
+              // Oculta precios mensuales
+              precioPremiumMes.style.display = 'none';
+              precioRedMes.style.display = 'none';
+              // Muestra precios anuales
+              precioPremiumAnio.style.display = 'block';
+              precioRedAnio.style.display = 'block';
+              
+              // Vuelve a calcular la conversión para ambos planes
+              convertir(precioPremiumMes, precioPremiumAnio, resultadoPremium);
+              convertir(precioRedMes, precioRedAnio, resultadoRed);
             });
         
             btnMes.addEventListener("click", function(e){
-              precioAnio.style.display = 'none';
-              precioAnio1.style.display = 'none';
-              precioMes.style.display = 'block';
-              precioMes1.style.display = 'block';
+              // Oculta precios anuales
+              precioPremiumAnio.style.display = 'none';
+              precioRedAnio.style.display = 'none';
+              // Muestra precios mensuales
+              precioPremiumMes.style.display = 'block';
+              precioRedMes.style.display = 'block';
+
+              // Vuelve a calcular la conversión para ambos planes
+              convertir(precioPremiumMes, precioPremiumAnio, resultadoPremium);
+              convertir(precioRedMes, precioRedAnio, resultadoRed);
             });
           });
+          
 
         </script>
          <footer class="footer">
