@@ -40,7 +40,10 @@ document.querySelector('.btn-warning').addEventListener('click', function () {
     vistaPrevia.style.display = "none";
     formulario.style.display = "block";
 });
-document.querySelector('.btn-success').addEventListener('click', function () {
+
+
+
+document.getElementById("btnSiguiente").addEventListener('click', function () {
     // Obtener valores del formulario
     const titulo = document.getElementById('inputAddress2').value;
     const ciudad = document.getElementById('inputCity').value;
